@@ -58,115 +58,114 @@ def get_animations(root_dir):
                 })
     return animations
 
-# Ask user for the final video duration
-print("============================================================")
-print("                  VIDEO CREATION TOOL                      ")
-print("============================================================")
-video_duration_str = input("Enter the desired final video duration in seconds (e.g., 60): ")
-total_duration = float(video_duration_str)
-print("------------------------------------------------------------")
-
-print("[INFO] Parsing transcript...")
-segments = parse_transcript('transcript.txt', total_duration)
-
-print("[INFO] Collecting animations...")
-animations = get_animations('animations/man')
-
-if not animations:
-    print("[ERROR] No animations found. Exiting.")
-    exit()
-
-print("[INFO] Animations loaded successfully.")
-print("------------------------------------------------------------")
-
-print("[INFO] Building the video timeline...")
-current_time = 0
-current_animation = random.choice(animations)
-current_animation_position = 0
-current_segment_index = 0
-current_speaker = segments[current_segment_index]['speaker'] if segments else 'SPEAKER 1'
-video_clips = []
-
 def print_progress_bar(current, total, length=30):
     filled_len = int(length * current / total)
     bar = '=' * filled_len + '-' * (length - filled_len)
     return f"[{bar}] {current:.2f}/{total:.2f}s"
 
-while current_time < total_duration:
-    # Determine the next speaker change time
-    if current_segment_index < len(segments):
-        next_speaker_change_time = segments[current_segment_index]['end_time']
-    else:
-        next_speaker_change_time = total_duration
+def run_man(total_duration, transcript_path, animation_path):
+    print("============================================================")
+    print("                  VIDEO CREATION TOOL                      ")
+    print("============================================================")
+    print(f"[INFO] Using total_duration={total_duration}, transcript={transcript_path}, animations={animation_path}")
+    print("------------------------------------------------------------")
 
-    # Determine when the current animation ends
-    current_animation_duration = current_animation['duration']
-    time_remaining_in_animation = current_animation_duration - current_animation_position
-    next_animation_end_time = current_time + time_remaining_in_animation
+    print("[INFO] Parsing transcript...")
+    segments = parse_transcript(transcript_path, total_duration)
 
-    # Determine the next event time
-    next_event_time = min(next_speaker_change_time, next_animation_end_time, total_duration)
-    duration = next_event_time - current_time
+    print("[INFO] Collecting animations...")
+    animations = get_animations(animation_path)
 
-    # Select the appropriate video version
-    if current_speaker == 'SPEAKER 2':
-        source_clip = current_animation['with_lip_move']
-        clip_type = "_with_lip_move"
-    else:
-        source_clip = current_animation['without_lip_move']
-        clip_type = "_without_lip_move"
+    if not animations:
+        print("[ERROR] No animations found. Exiting.")
+        return
 
-    print(f"[CLIP] Adding from {current_time:.2f}s to {next_event_time:.2f}s "
-          f"({duration:.2f}s) using {os.path.basename(source_clip.filename)} [{clip_type}]")
+    print("[INFO] Animations loaded successfully.")
+    print("------------------------------------------------------------")
 
-    # Extract the subclip from the preloaded clip
-    clip = source_clip.subclip(current_animation_position, current_animation_position + duration)
-    video_clips.append(clip)
+    print("[INFO] Building the video timeline...")
+    current_time = 0
+    current_animation = random.choice(animations)
+    current_animation_position = 0
+    current_segment_index = 0
+    current_speaker = segments[current_segment_index]['speaker'] if segments else 'SPEAKER 1'
+    video_clips = []
 
-    current_time = next_event_time
-    current_animation_position += duration
-
-    # Handle speaker change
-    if abs(current_time - next_speaker_change_time) < 0.001:
+    while current_time < total_duration:
+        # Determine the next speaker change time
         if current_segment_index < len(segments):
-            old_speaker = current_speaker
-            current_segment_index += 1
+            next_speaker_change_time = segments[current_segment_index]['end_time']
+        else:
+            next_speaker_change_time = total_duration
+
+        # Determine when the current animation ends
+        current_animation_duration = current_animation['duration']
+        time_remaining_in_animation = current_animation_duration - current_animation_position
+        next_animation_end_time = current_time + time_remaining_in_animation
+
+        # Determine the next event time
+        next_event_time = min(next_speaker_change_time, next_animation_end_time, total_duration)
+        duration = next_event_time - current_time
+
+        # Select the appropriate video version
+        if current_speaker == 'SPEAKER 2':
+            source_clip = current_animation['with_lip_move']
+            clip_type = "_with_lip_move"
+        else:
+            source_clip = current_animation['without_lip_move']
+            clip_type = "_without_lip_move"
+
+        print(f"[CLIP] Adding from {current_time:.2f}s to {next_event_time:.2f}s "
+              f"({duration:.2f}s) using {os.path.basename(source_clip.filename)} [{clip_type}]")
+
+        # Extract the subclip from the preloaded clip
+        clip = source_clip.subclip(current_animation_position, current_animation_position + duration)
+        video_clips.append(clip)
+
+        current_time = next_event_time
+        current_animation_position += duration
+
+        # Handle speaker change
+        if abs(current_time - next_speaker_change_time) < 0.001:
             if current_segment_index < len(segments):
-                current_speaker = segments[current_segment_index]['speaker']
+                old_speaker = current_speaker
+                current_segment_index += 1
+                if current_segment_index < len(segments):
+                    current_speaker = segments[current_segment_index]['speaker']
+                else:
+                    current_speaker = 'SPEAKER 1'
+                print("------------------------------------------------------------")
+                print(f"[SPEAKER CHANGE] {old_speaker} --> {current_speaker} at {current_time:.2f}s")
+                print("------------------------------------------------------------")
             else:
                 current_speaker = 'SPEAKER 1'
+
+        # Handle animation end
+        if abs(current_time - next_animation_end_time) < 0.001:
             print("------------------------------------------------------------")
-            print(f"[SPEAKER CHANGE] {old_speaker} --> {current_speaker} at {current_time:.2f}s")
+            print(f"[ANIMATION ENDED] Switching to a new animation at {current_time:.2f}s")
             print("------------------------------------------------------------")
-        else:
-            current_speaker = 'SPEAKER 1'
+            current_animation = random.choice(animations)
+            current_animation_position = 0
 
-    # Handle animation end
-    if abs(current_time - next_animation_end_time) < 0.001:
-        print("------------------------------------------------------------")
-        print(f"[ANIMATION ENDED] Switching to a new animation at {current_time:.2f}s")
-        print("------------------------------------------------------------")
-        current_animation = random.choice(animations)
-        current_animation_position = 0
+        # Print progress every 10 seconds
+        if int(current_time) % 10 == 0:
+            progress = print_progress_bar(current_time, total_duration)
+            print(f"[PROGRESS] {progress}")
 
-    # Print progress every 10 seconds
-    if int(current_time) % 10 == 0:
-        progress = print_progress_bar(current_time, total_duration)
-        print(f"[PROGRESS] {progress}")
+    print("------------------------------------------------------------")
+    print("[INFO] Concatenating video clips...")
+    final_clip = concatenate_videoclips(video_clips, method="compose")
 
-print("------------------------------------------------------------")
-print("[INFO] Concatenating video clips...")
-final_clip = concatenate_videoclips(video_clips, method="compose")
+    print("[INFO] Rendering final video...")
+    final_clip.write_videofile('man.mp4', codec='libx264', audio_codec='aac')
 
-print("[INFO] Rendering final video...")
-final_clip.write_videofile('man.mp4', codec='libx264', audio_codec='aac')
+    # Close all loaded clips
+    for anim in animations:
+        anim['with_lip_move'].close()
+        anim['without_lip_move'].close()
 
-# Close all loaded clips
-for anim in animations:
-    anim['with_lip_move'].close()
-    anim['without_lip_move'].close()
-
-print("============================================================")
-print("          PROCESS COMPLETED SUCCESSFULLY!                   ")
-print("           Your video: man.mp4 is ready!                    ")
-print("============================================================")
+    print("============================================================")
+    print("          PROCESS COMPLETED SUCCESSFULLY!                   ")
+    print("           Your video: man.mp4 is ready!                    ")
+    print("============================================================")

@@ -1,28 +1,40 @@
+import os
 from moviepy.editor import VideoFileClip, clips_array
 
-# Load the video clips
-girl_clip = VideoFileClip('girl.mp4')
-man_clip = VideoFileClip('man.mp4')
+def run_combine(girl_path='girl.mp4', man_path='man.mp4', output_path='combined_video.mp4'):
+    print("============================================================")
+    print("[INFO] Combining the two videos side by side.")
+    print(f"[INFO] Girl Video: {girl_path}")
+    print(f"[INFO] Man Video: {man_path}")
+    print("------------------------------------------------------------")
 
-# Ensure both clips have the same duration
-min_duration = min(girl_clip.duration, man_clip.duration)
-girl_clip = girl_clip.subclip(0, min_duration)
-man_clip = man_clip.subclip(0, min_duration)
+    girl_clip = VideoFileClip(girl_path)
+    man_clip = VideoFileClip(man_path)
 
-# Crop each clip to half its width
-girl_half = girl_clip.crop(x1=0, y1=0, width=girl_clip.w / 2, height=girl_clip.h)
-man_half = man_clip.crop(x1=man_clip.w / 2, y1=0, width=man_clip.w / 2, height=man_clip.h)
+    # Ensure both clips have the same duration
+    min_duration = min(girl_clip.duration, man_clip.duration)
+    girl_clip = girl_clip.subclip(0, min_duration)
+    man_clip = man_clip.subclip(0, min_duration)
 
-# Resize clips to ensure they have the same height
-if girl_half.h != man_half.h:
-    min_height = min(girl_half.h, man_half.h)
-    girl_half = girl_half.resize(height=min_height)
-    man_half = man_half.resize(height=min_height)
+    # Crop each clip to half its width
+    girl_half = girl_clip.crop(x1=0, y1=0, width=girl_clip.w / 2, height=girl_clip.h)
+    man_half = man_clip.crop(x1=man_clip.w / 2, y1=0, width=man_clip.w / 2, height=man_clip.h)
 
-# Combine the two halves side by side
-final_clip = clips_array([[girl_half, man_half]])
+    # Resize clips to ensure they have the same height
+    if girl_half.h != man_half.h:
+        min_height = min(girl_half.h, man_half.h)
+        girl_half = girl_half.resize(height=min_height)
+        man_half = man_half.resize(height=min_height)
 
-# Write the result to a file
-final_clip.write_videofile('combined_video.mp4')
+    # Combine the two halves side by side
+    final_clip = clips_array([[girl_half, man_half]])
 
-print("Videos have been combined and saved as 'combined_video.mp4'.")
+    print("[INFO] Rendering combined video...")
+    final_clip.write_videofile(output_path)
+
+    girl_clip.close()
+    man_clip.close()
+    print("============================================================")
+    print("[INFO] Combined video created successfully!")
+    print(f"[INFO] Output: {output_path}")
+    print("============================================================")

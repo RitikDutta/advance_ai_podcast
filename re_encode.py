@@ -2,47 +2,47 @@ import os
 import subprocess
 import tempfile
 
-# Set the base directory containing the MP4 files you want to process
-base_dir = "animations"
+def run_re_encode(base_dir="animations"):
+    print("============================================================")
+    print("[INFO] Re-encoding all .mp4 files in the directory.")
+    print(f"[INFO] Base directory: {base_dir}")
+    print("------------------------------------------------------------")
 
-# FFmpeg command template (adjust codecs/parameters as needed)
-# -y: overwrite without asking
-# -c:v libx264: re-encode video using H.264
-# -c:a aac: re-encode audio using AAC
-# -preset fast: optional for faster encoding, can remove or adjust
-# -crf 23: optional quality parameter for libx264 (lower = better quality, larger file)
-ffmpeg_cmd_template = [
-    "ffmpeg",
-    "-y",  # overwrite output
-    "-i", "",  # input (will be replaced)
-    "-c:v", "libx264",
-    "-c:a", "aac",
-    "-strict", "experimental",  # may not be needed for modern ffmpeg
-    "-preset", "fast",  # optional: faster encoding
-    "-crf", "23",       # optional: control quality
-    ""  # output (will be replaced)
-]
+    ffmpeg_cmd_template = [
+        "ffmpeg",
+        "-y",  # overwrite output
+        "-i", "",  # input placeholder
+        "-c:v", "libx264",
+        "-c:a", "aac",
+        "-strict", "experimental", # may not be needed in modern ffmpeg
+        "-preset", "fast",
+        "-crf", "23",  # adjust as needed
+        ""  # output placeholder
+    ]
 
-for root, dirs, files in os.walk(base_dir):
-    for f in files:
-        if f.lower().endswith(".mp4"):
-            input_path = os.path.join(root, f)
-            # Create a temporary file to avoid overwriting input before checking success
-            tmp_fd, tmp_path = tempfile.mkstemp(suffix=".mp4", dir=root)
-            os.close(tmp_fd)  # close the file descriptor as ffmpeg will write to it
-            
-            cmd = ffmpeg_cmd_template[:]
-            cmd[3] = input_path  # place input after -i
-            cmd[-1] = tmp_path   # set output path
-            
-            print(f"Re-encoding: {input_path}")
-            result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
-            
-            if result.returncode == 0:
-                # Replace the original file with the converted one
-                os.replace(tmp_path, input_path)
-                print(f"Successfully re-encoded and replaced: {input_path}")
-            else:
-                # If ffmpeg failed, remove temp file and print error
-                os.remove(tmp_path)
-                print(f"Error re-encoding {input_path}: {result.stderr}")
+    for root, dirs, files in os.walk(base_dir):
+        for f in files:
+            if f.lower().endswith(".mp4"):
+                input_path = os.path.join(root, f)
+                tmp_fd, tmp_path = tempfile.mkstemp(suffix=".mp4", dir=root)
+                os.close(tmp_fd)
+
+                cmd = ffmpeg_cmd_template[:]
+                cmd[3] = input_path  # input after -i
+                cmd[-1] = tmp_path   # output
+
+                print(f"[INFO] Re-encoding: {input_path}")
+                result = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True)
+
+                if result.returncode == 0:
+                    # Replace the original file with the converted one
+                    os.replace(tmp_path, input_path)
+                    print(f"[SUCCESS] Re-encoded and replaced: {input_path}")
+                else:
+                    # If ffmpeg failed, remove temp file and print error
+                    os.remove(tmp_path)
+                    print(f"[ERROR] Failed to re-encode {input_path}: {result.stderr}")
+
+    print("============================================================")
+    print("[INFO] Re-encoding process completed!")
+    print("============================================================")
