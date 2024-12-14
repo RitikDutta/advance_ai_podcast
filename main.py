@@ -3,8 +3,16 @@ from girl import run_girl
 from combine import run_combine
 from re_encode import run_re_encode
 
+from parser import get_total_seconds_from_transcript
+
+
 if __name__ == "__main__":
-    video_duration_str = input("Enter the desired final video duration in seconds (e.g., 60): ")
+
+    transcript_file = 'transcript.txt'
+    total_seconds = get_total_seconds_from_transcript(transcript_file)
+    print("TOTAL SECONDS", total_seconds)
+
+    video_duration_str = total_seconds
     total_duration = float(video_duration_str)
     transcript_path = "transcript.txt"
 
