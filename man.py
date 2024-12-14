@@ -37,6 +37,24 @@ def parse_transcript(filename, total_duration):
 
     return segments
 
+def determine_category(dirpath, filename):
+    # Determine animation category from directory name or filename.
+    # Adjust logic as needed for your file structure.
+    # Example assumption: directories might be named after categories:
+    # animations/man/fill, animations/man/nod, animations/man/yes_long, animations/man/sip_coffee
+    lower_path = dirpath.lower()
+    if 'sip_coffee' in lower_path:
+        return 'sip_coffee'
+    elif 'nod' in lower_path:
+        return 'nod'
+    elif 'yes_long' in lower_path:
+        return 'yes_long'
+    elif 'fill' in lower_path:
+        return 'fill'
+    else:
+        # Default category if not detected
+        return 'fill'
+
 def get_animations(root_dir):
     animations = []
     for dirpath, _, filenames in os.walk(root_dir):
@@ -51,10 +69,12 @@ def get_animations(root_dir):
                 without_lip_clip = VideoFileClip(without_lip_path)
                 anim_duration = with_lip_clip.duration
 
+                category = determine_category(dirpath, wl_file)
                 animations.append({
                     'with_lip_move': with_lip_clip,
                     'without_lip_move': without_lip_clip,
-                    'duration': anim_duration
+                    'duration': anim_duration,
+                    'category': category
                 })
     return animations
 
@@ -63,7 +83,8 @@ def print_progress_bar(current, total, length=30):
     bar = '=' * filled_len + '-' * (length - filled_len)
     return f"[{bar}] {current:.2f}/{total:.2f}s"
 
-def run_man(total_duration, transcript_path, animation_path):
+def run_man(total_duration, transcript_path, animation_path,
+            sip_coffee_prob, nod_prob, yes_long_prob, fill_prob):
     print("============================================================")
     print("                  VIDEO CREATION TOOL                      ")
     print("============================================================")
@@ -83,9 +104,30 @@ def run_man(total_duration, transcript_path, animation_path):
     print("[INFO] Animations loaded successfully.")
     print("------------------------------------------------------------")
 
+    # Function to select an animation with weighted probabilities based on category
+    def pick_animation():
+        # Calculate weights for each animation based on its category
+        weights = []
+        for anim in animations:
+            cat = anim['category']
+            if cat == 'sip_coffee':
+                w = sip_coffee_prob
+            elif cat == 'nod':
+                w = nod_prob
+            elif cat == 'yes_long':
+                w = yes_long_prob
+            elif cat == 'fill':
+                w = fill_prob
+            else:
+                w = fill_prob  # default fallback
+
+            weights.append(w)
+        # Use random.choices with these weights
+        return random.choices(animations, weights=weights, k=1)[0]
+
     print("[INFO] Building the video timeline...")
     current_time = 0
-    current_animation = random.choice(animations)
+    current_animation = pick_animation()  # pick initial animation with weights
     current_animation_position = 0
     current_segment_index = 0
     current_speaker = segments[current_segment_index]['speaker'] if segments else 'SPEAKER 1'
@@ -116,7 +158,7 @@ def run_man(total_duration, transcript_path, animation_path):
             clip_type = "_without_lip_move"
 
         print(f"[CLIP] Adding from {current_time:.2f}s to {next_event_time:.2f}s "
-              f"({duration:.2f}s) using {os.path.basename(source_clip.filename)} [{clip_type}]")
+              f"({duration:.2f}s) using {os.path.basename(source_clip.filename)} [{current_animation['category']}{clip_type}]")
 
         # Extract the subclip from the preloaded clip
         clip = source_clip.subclip(current_animation_position, current_animation_position + duration)
@@ -145,7 +187,7 @@ def run_man(total_duration, transcript_path, animation_path):
             print("------------------------------------------------------------")
             print(f"[ANIMATION ENDED] Switching to a new animation at {current_time:.2f}s")
             print("------------------------------------------------------------")
-            current_animation = random.choice(animations)
+            current_animation = pick_animation()
             current_animation_position = 0
 
         # Print progress every 10 seconds
