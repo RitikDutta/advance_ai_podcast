@@ -36,10 +36,18 @@ if __name__ == "__main__":
     run_man(total_duration, transcript_path, "animations/man",
             sip_coffee_prob, nod_prob, yes_long_prob, fill_prob)
 
+    # Re-encode animations if needed
+    print("Running re-encoding of animations...")
+    run_re_encode(base_dir="animations")
+
     # Run 'girl' video generation with probabilities (no sip_coffee)
     print("Running girl video creation...")
     run_girl(total_duration, transcript_path, "animations",
              girl_nod_prob, girl_yes_long_prob, girl_fill_prob)
+
+    # Re-encode animations if needed
+    print("Running re-encoding of animations...")
+    run_re_encode(base_dir="animations")
 
     # Combine the two videos
     print("Running video combination...")
