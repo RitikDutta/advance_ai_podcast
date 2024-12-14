@@ -1,367 +1,551 @@
 
-SPEAKER 2 0:00:00:000
-Okay, so get this. Today we're diving into the world of someone you might just encounter online. You know, like digitally bump into Riddik Dutta. 
-SPEAKER 1 0:00:09:599
-Okay. 
-SPEAKER 2 0:00:11:099
-And you know what's really cool? 
-SPEAKER 1 0:00:12:320
-What's that? 
-SPEAKER 2 0:00:13:380
-We've got a treasure trove of information about him that you've sent over. 
-SPEAKER 1 0:00:17:679
-Really? 
-SPEAKER 2 0:00:18:519
-Like what? It's amazing. We have his online profiles. 
-SPEAKER 1 0:00:21:280
-Yeah. 
-SPEAKER 2 0:00:22:120
-Like the whole shebang. 
-SPEAKER 1 0:00:22:960
-Wow. 
-SPEAKER 2 0:00:23:800
-Work history, even snapshots of his volunteer work. 
-SPEAKER 1 0:00:27:160
-Wow, that is quite a bit. 
-SPEAKER 2 0:00:28:800
-It is. It's like having all these puzzle pieces just scattered out on a table. And you know, today that's what we're doing. We're putting those pieces together. 
-SPEAKER 1 0:00:36:960
-I like it. 
-SPEAKER 2 0:00:37:799
-We're trying to see what the bigger picture is. 
-SPEAKER 1 0:00:39:240
-Sounds like fun. 
-SPEAKER 2 0:00:40:079
-What makes Riddik tick, you know. 
-SPEAKER 1 0:00:41:799
-Yeah. 
-SPEAKER 2 0:00:42:619
-Both as like a tech person, but also just as a person. 
-SPEAKER 1 0:00:45:359
+SPEAKER 1 0:00:00:000
+Welcome to the deep dive. We're doing something a little different with this deep dive. We're gonna be looking at a whole bunch of fascinating facts and trivia that came from a conversation we had earlier. That's right. And we thought it would be fun to share some of those nuggets of knowledge with you. 
+SPEAKER 2 0:00:16:160
+Yeah, I mean, who doesn't love a good trivia tidbit, right? 
+SPEAKER 1 0:00:19:179
+Okay, so to kick things off, I have one that just completely blew my mind. Did you know that there's an animal out there with fingerprints so close to humans that they could actually mess up a crime scene investigation? Really? Yeah. 
+SPEAKER 2 0:00:35:240
+What is it, a chimpanzee? No. Okay, a gorilla. 
+SPEAKER 1 0:00:38:020
+Nope, it's a koala. 
+SPEAKER 2 0:00:39:140
+Koala. Koalas. Wow, their fingerprints. 
+SPEAKER 1 0:00:41:659
+I would not have guessed that. 
+SPEAKER 2 0:00:42:740
+I know. Their fingerprints have like the same loops and whorls as ours, making them almost impossible to tell apart from human prints. 
+SPEAKER 1 0:00:50:939
+So you're telling me a koala could frame me for a crime? 
+SPEAKER 2 0:00:54:060
+Well, I mean, theoretically, yeah. 
+SPEAKER 1 0:00:57:859
+But on a more serious note, this fact makes you think, right? Yeah. I mean, if their fingerprints are so similar, does that mean koalas and humans are like? 
+SPEAKER 2 0:01:07:420
+Closer than we think. 
+SPEAKER 1 0:01:08:420
+Closer than we think, evolutionarily. 
+SPEAKER 2 0:01:10:540
+It's a good question. Yeah. But it's not necessarily about being directly related. It's more about something called convergent evolution. 
+SPEAKER 1 0:01:20:260
+Convergent evolution. 
+SPEAKER 2 0:01:21:739
+Yeah, where like different species could end up developing similar traits. 
+SPEAKER 1 0:01:26:260
+Oh, I see. 
+SPEAKER 2 0:01:27:140
+Where they live in similar environments. 
+SPEAKER 1 0:01:28:939
+Ah. Or have similar ways of life. Okay, so they both need to grip things. 
+SPEAKER 2 0:01:33:500
+Yeah, exactly. So koalas gripping eucalyptus branches. 
+SPEAKER 1 0:01:37:140
+And humans using tools. 
+SPEAKER 2 0:01:38:859
+Exactly. 
+SPEAKER 1 0:01:39:700
+Wow. And you said this is called? 
+SPEAKER 2 0:01:41:659
+Convergent evolution. 
+SPEAKER 1 0:01:42:659
+Convergent evolution. Okay, I'm gonna try to remember that one. Yeah, that's a good one. So koalas and humans both developed these super similar fingerprints because they both needed to grip stuff. Exactly. That's amazing. The fact that we can be fooled by koalas fingerprints, it really makes you think about all the challenges that forensic scientists face. 
+SPEAKER 2 0:02:03:260
+Right. Imagine being a forensic scientist. 
+SPEAKER 1 0:02:05:459
+Yeah, yeah. 
+SPEAKER 2 0:02:06:299
+And you find these fingerprints and you think it's human. 
+SPEAKER 1 0:02:08:500
 Right. 
-SPEAKER 2 0:00:46:299
-So let's just dive right in. 
-SPEAKER 1 0:00:47:840
-It's intriguing to use data like this to try to understand a specific person. Yeah. It reminds us there are real people behind these algorithms and code. 
-SPEAKER 2 0:00:57:399
-It is. Humanizing all that techie stuff. 
-SPEAKER 1 0:00:59:840
-Exactly. Exactly. 
-SPEAKER 2 0:01:01:799
-And speaking of humanizing, you know, have you gotten a chance to look over the way Riddik describes himself? 
-SPEAKER 1 0:01:08:519
-I'd be curious to hear it. 
-SPEAKER 2 0:01:09:680
-This guy has energy. 
-SPEAKER 1 0:01:10:959
-Really? 
-SPEAKER 2 0:01:11:799
-I'm talking infectious, you know. 
-SPEAKER 1 0:01:13:359
-Oh wow. 
-SPEAKER 2 0:01:14:719
-He uses phrases like launch a rocket to Mars. 
-SPEAKER 1 0:01:17:319
-Wow. 
-SPEAKER 2 0:01:18:159
-AML magic. IOT wonder street out of a sci-fi dream. 
-SPEAKER 1 0:01:22:120
-He sounds ambitious. 
-SPEAKER 2 0:01:23:599
-This is a guy who I think it's safe to say doesn't just want to like write code. He wants to build the future. What do you make of that kind of self-presentation? 
-SPEAKER 1 0:01:33:680
-I mean, I think it suggests somebody who really thrives on ambition, pushing boundaries. He's not just interested in what technology can do today, but what it might be able to achieve, you know, tomorrow. Right. That forward thinking, that forward leaning approach. Coupled with that, you know, what sounds like a palpable enthusiasm is often what drives innovation. Yes. 
-SPEAKER 2 0:01:58:040
+SPEAKER 2 0:02:09:340
+And it turns out it was a koala all along. 
+SPEAKER 1 0:02:10:860
+It was a koala the whole time. 
+SPEAKER 2 0:02:12:780
+That's wild. 
+SPEAKER 1 0:02:13:819
+Yeah, nature is full of surprises. 
+SPEAKER 2 0:02:16:259
+It really highlights the need for careful analysis. 
+SPEAKER 1 0:02:20:460
+Yeah. 
+SPEAKER 2 0:02:21:300
+And you know, multiple layers of evidence when you're investigating something. 
+SPEAKER 1 0:02:25:300
+Absolutely. So we've established that koalas are way more complex than we initially thought. 
+SPEAKER 2 0:02:30:659
+Yeah. 
+SPEAKER 1 0:02:31:500
+Let's move on to the next fact. 
+SPEAKER 2 0:02:32:699
+Okay. 
+SPEAKER 1 0:02:33:539
+It's a geography question. All right. I think this one's gonna be pretty easy. Okay. What's the only US state that starts with the letter P? Pennsylvania. Pennsylvania. 
+SPEAKER 2 0:02:43:780
+The Keystone State. 
+SPEAKER 1 0:02:44:819
+The Keystone State, yeah. I always wondered where that nickname came from. 
+SPEAKER 2 0:02:47:900
+Well, Pennsylvania obviously comes from William Penn, its founder. Right. And Sylvania means woodlands. But the Keystone part, that comes from its central location, like right in the middle of the original 13 colonies. 
+SPEAKER 1 0:03:02:620
+Ah, okay. 
+SPEAKER 2 0:03:03:819
+It was kind of seen as this crucial link. 
+SPEAKER 1 0:03:05:699
+I see. 
+SPEAKER 2 0:03:06:539
+Both geographically and politically, so. 
+SPEAKER 1 0:03:08:340
+So it was really important. 
+SPEAKER 2 0:03:09:740
+Super important. Yeah, it held this like pivotal position. Wow. When the United States was being formed. 
+SPEAKER 1 0:03:15:259
+I never knew that. 
+SPEAKER 2 0:03:16:500
+It's pretty cool. 
+SPEAKER 1 0:03:17:419
+Right. 
+SPEAKER 2 0:03:18:259
+Yeah. 
+SPEAKER 1 0:03:19:139
+It's amazing how much history is packed into just like. The names of places. 
+SPEAKER 2 0:03:24:219
+I know. 
+SPEAKER 1 0:03:25:219
+Okay, ready for another fact. Hit me. All right, this one's about something a lot of people are afraid of. Okay. Spiders. What's the official name for the fear of spiders? 
+SPEAKER 2 0:03:35:060
+Arachnophobia. 
+SPEAKER 1 0:03:36:020
+Arachnophobia. 
+SPEAKER 2 0:03:37:180
+Yeah, and it's one of the most common phobias out there. 
+SPEAKER 1 0:03:39:539
+It is, I know a few people who definitely have arachnophobia. And while some fears might seem irrational, phobias can have a huge impact on people's lives. 
+SPEAKER 2 0:03:50:659
+They're not just like, oh, I'm a little scared of spiders. 
+SPEAKER 1 0:03:52:900
+Yeah. 
+SPEAKER 2 0:03:53:740
+It's a real anxiety disorder. 
+SPEAKER 1 0:03:55:979
+Right. 
+SPEAKER 2 0:03:56:819
+It can cause significant distress, impairment in their life. 
+SPEAKER 1 0:04:00:539
+That's intense. 
+SPEAKER 2 0:04:01:740
+Yeah, people with phobias often go to great lengths to avoid. 
+SPEAKER 1 0:04:04:699
+The thing they're afraid of. Exactly, whatever it is. 
+SPEAKER 2 0:04:06:580
+And that avoidance. 
+SPEAKER 1 0:04:08:020
+Can affect. 
+SPEAKER 2 0:04:08:860
+Can totally disrupt their daily routines, their relationships. 
+SPEAKER 1 0:04:12:620
+Yeah. 
+SPEAKER 2 0:04:13:460
+Their overall quality of life. 
+SPEAKER 1 0:04:14:500
+That's a really good reminder to be empathetic. Yeah. And understanding towards people with phobias. For sure. Yeah. Okay, ready for another intriguing fact. Let's venture out into space for this one. Sounds good. Okay. What is the only planet in our solar system that rotates on its side? Uranus. Uranus. 
+SPEAKER 2 0:04:34:620
+The ice giant. 
+SPEAKER 1 0:04:35:459
+It's tilted at like. 
+SPEAKER 2 0:04:36:579
+Almost a 90 degree angle. 
+SPEAKER 1 0:04:37:819
+Almost a 90 degree angle. 
+SPEAKER 2 0:04:39:180
+Yeah, which makes it seasons and it's day and night cycles. 
+SPEAKER 1 0:04:42:699
+Yeah. 
+SPEAKER 2 0:04:43:540
+Totally different from any other planet we know. 
+SPEAKER 1 0:04:45:019
+Uranus, the rebel of the solar system. 
+SPEAKER 2 0:04:46:939
+Right. It's doing its own thing. 
+SPEAKER 1 0:04:48:860
+But how does that extreme tilt affect things like the climate and weather patterns on Uranus? 
+SPEAKER 2 0:04:54:779
+Oh, it's wild. 
+SPEAKER 1 0:04:55:939
+Yeah. 
+SPEAKER 2 0:04:56:779
+It's a world of extremes. Imagine this. One pole is facing the sun for half a year. 
+SPEAKER 1 0:05:01:339
+Okay. 
+SPEAKER 2 0:05:02:180
+Constant daylight. Wow. The other pole is in darkness. The kind of tilt just messes with everything. 
+SPEAKER 1 0:05:09:339
+Yeah. 
+SPEAKER 2 0:05:10:180
+The atmospheric circulation, you get some really bizarre weather. 
+SPEAKER 1 0:05:13:660
+It's like something out of science fiction. 
+SPEAKER 2 0:05:15:220
+It really is. 
+SPEAKER 1 0:05:16:139
+Speaking of unique. Uh-huh. Let's talk about a place that's definitely one of a kind here on Earth. What's the smallest country in the world? 
+SPEAKER 2 0:05:23:939
+That would be Vatican City. 
+SPEAKER 1 0:05:25:180
+Vatican City. 
+SPEAKER 2 0:05:26:180
+A tiny sovereign state. Right there in the heart of Rome. 
+SPEAKER 1 0:05:28:939
+Yeah. I've always been fascinated by Vatican City. It's such a small area. 
+SPEAKER 2 0:05:33:500
+It is tiny. 
+SPEAKER 1 0:05:34:339
+But so much history and religious significance. 
+SPEAKER 2 0:05:37:459
+Yeah. I mean, it's the center of the Catholic church. 
+SPEAKER 1 0:05:39:819
+Right. And the art and architecture there is just. Stunning. Breathtaking. It's incredible how much. Bear with me. The history and culture and religious influence. 
+SPEAKER 2 0:05:48:300
+Yeah. 
+SPEAKER 1 0:05:49:139
+Can be concentrated in such a small space. It really is. Vatican City kind of serves as like a constant reminder of the power of faith and tradition. Yeah. And how they continue to shape the world today. 
+SPEAKER 2 0:05:59:459
 Absolutely. 
-SPEAKER 1 0:01:58:879
-You know, you need that kind of energy. 
-SPEAKER 2 0:02:00:280
-It's like he's picturing the end goal, you know, the impossible being made possible before he even sits down to write a single line of code. 
-SPEAKER 1 0:02:08:560
-I love that. 
-SPEAKER 2 0:02:10:000
-Now, when I was looking at Retic's self-listed skills, two things really jumped out at me. 
-SPEAKER 1 0:02:15:120
-Yeah. 
-SPEAKER 2 0:02:15:960
-First, just the variety. 
-SPEAKER 1 0:02:17:080
-Okay. 
-SPEAKER 2 0:02:17:919
-It's mind blowing. He's got everything from deep learning frameworks, 
-SPEAKER 1 0:02:20:919
-you know, like TensorFlow, 
-SPEAKER 2 0:02:22:759
-which let's be honest, sounds kind of intimidating. 
-SPEAKER 1 0:02:25:599
-It does. 
-SPEAKER 2 0:02:27:319
-To web development with Flask, and even game design with Blender and Unity. 
-SPEAKER 1 0:02:32:159
-Wow. 
-SPEAKER 2 0:02:33:879
-This guy's like a one man tech orchestra. 
-SPEAKER 1 0:02:36:319
+SPEAKER 1 0:06:00:300
+We've gone from koala fingerprints. 
+SPEAKER 2 0:06:02:699
+Mm-hmm. 
+SPEAKER 1 0:06:03:540
+To the tilted wonders of Uranus. Yep. To the historical significance of Vatican City. 
+SPEAKER 2 0:06:09:339
+Quite a range. What a whirlwind. And we're just getting started. 
+SPEAKER 1 0:06:12:300
+I know. 
+SPEAKER 2 0:06:13:180
+We've got so many more fascinating facts to uncover. 
+SPEAKER 1 0:06:15:860
+Welcome back to the deep dive. We're on a roll with these fascinating facts and I'm ready for more. 
+SPEAKER 2 0:06:22:019
+Yeah, me too. 
+SPEAKER 1 0:06:22:980
+I'm still thinking about those koala fingerprints. It's just wild. 
+SPEAKER 2 0:06:26:339
+I know, right? 
+SPEAKER 1 0:06:27:660
+Okay, let's keep that momentum going. Okay. This next fact. Mm-hmm. Really puts things into perspective. 
+SPEAKER 2 0:06:33:740
+All right, I'm ready. 
+SPEAKER 1 0:06:34:579
+Hit me with it. Okay, here it is. Mm-hmm. Did you know that there are more trees on earth than stars in the Milky Way galaxy? 
+SPEAKER 2 0:06:42:500
+Wait, hold on, really? 
+SPEAKER 1 0:06:43:620
+Yeah. That sounds impossible. I know, it's mind blowing, but it's true. Wow. Scientists estimate that there are over three trillion trees. 
+SPEAKER 2 0:06:52:779
+Three trillion? 
+SPEAKER 1 0:06:53:620
+Three trillion, yeah, on our planet. 
+SPEAKER 2 0:06:55:620
+That's a lot of trees. 
+SPEAKER 1 0:06:56:939
+While the Milky Way galaxy has somewhere between 100 and 400 billion stars. 
+SPEAKER 2 0:07:03:060
+Wow, that's insane. So many more trees than stars. 
+SPEAKER 1 0:07:06:180
+I know, right? 
+SPEAKER 2 0:07:07:139
+It really makes you appreciate the sheer scale of all the forests on our planet and all the life they support. 
+SPEAKER 1 0:07:13:699
+Right, and it makes you think about conservation. 
+SPEAKER 2 0:07:16:139
+Absolutely. 
+SPEAKER 1 0:07:16:980
+Especially with all the threats that forests are facing right now. 
+SPEAKER 2 0:07:19:779
+Deforestation, climate change. 
+SPEAKER 1 0:07:21:420
+Exactly, I mean, each one of those trillions of trees plays a vital role in our ecosystem. 
+SPEAKER 2 0:07:29:439
+It does, I mean, think about it. Every tree absorbs carbon dioxide. 
+SPEAKER 1 0:07:33:339
+Produces oxygen. 
+SPEAKER 2 0:07:34:459
+Helps regulate the water cycles. 
+SPEAKER 1 0:07:35:860
+Prevents soil erosion. 
+SPEAKER 2 0:07:37:100
+Provides habitat. 
+SPEAKER 1 0:07:37:939
+It's incredible. 
+SPEAKER 2 0:07:38:779
+It's so important. 
+SPEAKER 1 0:07:39:620
+I'm feeling inspired to go hug a tree. 
+SPEAKER 2 0:07:41:579
+Yeah, go hug a tree. 
+SPEAKER 1 0:07:42:459
+Speaking of vastness. Okay. Let's talk about something equally massive. 
+SPEAKER 2 0:07:46:420
+All right, I'm ready. 
+SPEAKER 1 0:07:47:259
+What is the largest ocean on Earth? 
+SPEAKER 2 0:07:50:180
+Oh, that's gotta be the Pacific, right? 
+SPEAKER 1 0:07:51:819
+You are absolutely right. Yeah. The Pacific Ocean. It's huge. It's mind-boggling how big it is. I know. It covers over 30% of the Earth's surface. 
+SPEAKER 2 0:08:00:939
+That's a lot of water. 
+SPEAKER 1 0:08:02:060
+I know, right? 
+SPEAKER 2 0:08:02:980
 That's amazing. 
-SPEAKER 2 0:02:37:560
-I mean, really, what does that tell you? 
-SPEAKER 1 0:02:38:879
-I mean, it speaks to a versatility that's so incredibly valuable in the tech world these days. It's like, you know, being a Swiss army knife. You've got a tool for everything. Exactly. And, you know, this kind of like full stack developer, comfortable across all those different layers of technology. Yeah, yeah. They're super sought after. I bet. Because they can see the bigger picture. 
-SPEAKER 2 0:03:01:879
-They can connect those docs. 
-SPEAKER 1 0:03:03:240
-Exactly. 
-SPEAKER 2 0:03:04:080
-They're not just coding in a silo. They see how it all works together. 
-SPEAKER 1 0:03:06:919
-100%. 
-SPEAKER 2 0:03:07:879
-The second thing that struck me was that he lists cybersecurity as a skill. 
-SPEAKER 1 0:03:12:879
-Oh, interesting. 
-SPEAKER 2 0:03:14:120
-Especially these days, right? When you've got data breaches happening practically every other day, it seems like, seeing someone prioritize that, you know, security, just right there on their profile, that's reassuring. 
-SPEAKER 1 0:03:27:479
-Absolutely, absolutely. It speaks to, I think, a proactive mindset. Someone who's thinking about like the potential risks and vulnerabilities right from the get go. 
-SPEAKER 2 0:03:37:360
-From the beginning. 
-SPEAKER 1 0:03:38:280
-Which is crucial, I think, when you're dealing with, you know, sensitive data and complex systems, which it seems like Ritik is, you know, drawn to based on his background. 
-SPEAKER 2 0:03:47:560
-And that, you know, that leads us perfectly into that next layer of the puzzle. It's like, you know, mapping his expertise. We've got this, like, you know, key-tailed work history. It's like a trail of breadcrumbs of projects and roles. And then that incredible skills list that we were just going over. Let's see if we can, you know, connect the dots. 
-SPEAKER 1 0:04:07:439
-Sounds good. It's interesting to see how, you know, like, fields that you might not think are connected actually intertwine in somebody's career path. Definitely. Like, take his interest in game design, for example. It might seem a world away from data science and backend development, but, you know. That's what I'm wondering. 
-SPEAKER 2 0:04:23:480
-It's not like he just woke up one morning and said, like, okay, you know, bye-bye joysticks. Hello, databases. 
-SPEAKER 1 0:04:30:959
-Right. 
-SPEAKER 2 0:04:31:800
-There's gotta be something that connects those things. 
-SPEAKER 1 0:04:33:399
-For sure, 100%. Think about it this way. Like, game design often means that you're creating, like, these complex systems. Yeah. With, like, intricate logic. Uh-huh. And problem solving, like, constantly. 
-SPEAKER 2 0:04:47:519
-Right. 
-SPEAKER 1 0:04:48:360
-Those are all skills that translate super well into, like, the programming world. 
-SPEAKER 2 0:04:52:560
-Oh, interesting, okay. 
-SPEAKER 1 0:04:53:800
-And then you add in the cybersecurity background. That suggests somebody who understands, you know, like, how systems can be vulnerable, right? How to exploit weakness. That's so valuable when you're building, you know, secure backend infrastructures. Right, right. It's like a detective, you know? Learning to think like a criminal. 
-SPEAKER 2 0:05:14:000
-Oh, that's a good analogy. 
-SPEAKER 1 0:05:14:959
-You're better equipped to prevent and, you know, anticipate problems. 
-SPEAKER 2 0:05:18:800
-I like that. So it's not just about, like, you know, acquiring, like, new skills. It's like building on something. Totally. Building upon that base. 
-SPEAKER 1 0:05:27:639
-100%. And, you know, you can really see that when we look at his time at iNuron. This is where he worked, you know, as both a computer vision engineer and a full-stack data scientist. 
-SPEAKER 2 0:05:36:360
-Those are some really, like, futuristic-sounding job titles. 
-SPEAKER 1 0:05:40:120
-I know. If you told somebody a decade ago that your job was to engineer computer vision, they'd probably think you were building, like, robots that could see. 
-SPEAKER 2 0:05:49:079
-They would. 
-SPEAKER 1 0:05:49:920
-Which, you know, we're not that far off. 
-SPEAKER 2 0:05:52:800
-But still. 
-SPEAKER 1 0:05:53:639
-It's getting there. Yeah, these are super specialized fields, 
-SPEAKER 2 0:05:56:680
-but with a lot of overlap. 
-SPEAKER 1 0:05:58:399
-Oh, really? Yeah. So computer vision, a lot of times, relies heavily on machine learning. Which is, you know, a core part of data science. It's all about teaching, like, machines to see and understand images the way that we do. Like, as humans. 
-SPEAKER 2 0:06:14:519
-So instead of, like, coding a million different rules 
-SPEAKER 1 0:06:17:800
-for every situation, 
-SPEAKER 2 0:06:19:279
-you're training algorithms to be able to, like, look for patterns and learn from new data. 
-SPEAKER 1 0:06:24:199
-Exactly. You got it. And, you know, being a full-stack data scientist, especially in this context, means you're not just, you know, like, developing the algorithms, but, like, you're also comfortable deploying them. Okay. Like, connecting them to, you know, whatever that user interface might be. Yeah. 
-SPEAKER 2 0:06:40:519
-Basically building that whole, like, 
-SPEAKER 1 0:06:41:920
-data-driven experience. Wow. And that kind of leads us into, you know, a project that I think is close to Ritik's heart, which is, you know, Dada McGrata? 
-SPEAKER 2 0:06:51:720
-Dada McGrata, yes. We've seen that name pop up a couple of times. 
-SPEAKER 1 0:06:54:759
-Right. 
-SPEAKER 2 0:06:55:600
-In, you know, what we have about him. So it's this Python package that he created. 
-SPEAKER 1 0:07:00:160
-Yeah. 
-SPEAKER 2 0:07:01:000
-And, like, thank goodness we have this visual diagram that you mentioned. 
-SPEAKER 1 0:07:04:040
-Yeah. It helps a lot. 
-SPEAKER 2 0:07:05:720
-Because it helps us wrap our heads around it. 
-SPEAKER 1 0:07:07:199
-It is pretty complex. 
-SPEAKER 2 0:07:08:600
-So for our listeners, imagine moving data between different systems, being as simple as, like, dragging and dropping files on your computer. 
-SPEAKER 1 0:07:16:680
-Yeah. 
-SPEAKER 2 0:07:17:519
-Like, no more trying to wrangle, like, incompatible formats. 
-SPEAKER 1 0:07:21:120
-Yeah. 
-SPEAKER 2 0:07:21:959
-Or spending hours, like, manually transferring information. 
-SPEAKER 1 0:07:25:000
-You're really hitting on a major pain point. Yeah. Especially in those, like, big organizations. Okay. It's that, you know, like, data silo thing. Yeah. Where you've got different departments, maybe they use different software. Right. Each one has their own database. Right. And then suddenly, the data is tracked. It's isolated. It is, it's isolated. And so a tool like DataMogrado can actually break those silos down. That's amazing. And it can seamlessly move that data between, you know, systems like Cassandra, MongoDB, Firebase, Firestore. Between all of them. It's a big deal. 
-SPEAKER 2 0:07:58:600
-That's amazing. So it's like he's building a bridge. 
-SPEAKER 1 0:08:01:319
-Yeah. 
-SPEAKER 2 0:08:02:160
-Between all of these, like, little islands of information. 
-SPEAKER 1 0:08:05:160
-100%. 
-SPEAKER 2 0:08:06:000
-And making sure that the right data gets to the right place at the right time. 
-SPEAKER 1 0:08:09:319
-That's it. 
-SPEAKER 2 0:08:10:160
-And that connects directly into his experience with backend development and ETL pipelines, right? 
-SPEAKER 1 0:08:15:759
-Yes, absolutely. So backend is basically like all of that, you know, behind the scenes magic. 
-SPEAKER 2 0:08:21:000
-Yeah, that we don't see as a user. 
-SPEAKER 1 0:08:22:360
-Exactly. All those servers and databases, you know, the complex processes that make like websites and apps actually work. 
-SPEAKER 2 0:08:29:199
-Right, right. 
-SPEAKER 1 0:08:30:040
-And then ETL, which stands for Extract, Transform, Load. Okay. It's basically, you know, how you take data from one place, you clean it up, you restructure it if you need to, and then you load it into a different system. Think of it kind of like taking, you know, like a diamond in the rough, like from the mine. Okay. And then turning it into this beautiful polished gem that's ready, you know, for display. Oh, I like that. 
-SPEAKER 2 0:08:53:720
-Yeah. So data integrato is like that perfect tool to use during the ETL process. 
-SPEAKER 1 0:08:58:960
-Exactly. 
-SPEAKER 2 0:08:59:799
-To make it all go smoothly. 
-SPEAKER 1 0:09:00:639
-100%. It's like smoother, faster, more efficient. Wow. It's like he, you know, like, anticipated that problem in data management and then built a really elegant solution. That's awesome. Yeah. And it's not just coding. It's like, you know, it's problem solving. 
-SPEAKER 2 0:09:16:919
-Right. Like high level problem solving. Totally. I'm starting to see like a pattern here. 
-SPEAKER 1 0:09:22:960
-Yeah. 
-SPEAKER 2 0:09:23:799
-What's that? Enthusiastic, multi-talented problem solver. It's like his resume is a thesaurus of like all these positive attributes. But here's what I find really truly remarkable. 
-SPEAKER 1 0:09:34:480
-What's that? 
-SPEAKER 2 0:09:35:399
-There's way more to this guy than just lines of code and these like data pipelines. 
-SPEAKER 1 0:09:41:480
-Yeah. 
-SPEAKER 2 0:09:42:320
-He's super involved in like doing social impact work with this group called the Robin Hood Army. 
-SPEAKER 1 0:09:49:639
-That's great. 
-SPEAKER 2 0:09:50:480
-Tell me more about them. 
-SPEAKER 1 0:09:51:320
-Yeah. I was really happy to see this part, you know. It would have been really easy to just focus on like the technical skills, which are, you know, impressive. They are. But this part, his volunteering really tells us a lot about him as a person. He's not just building like cool tech, but he's using his free time to make a really like, you know, a real difference in his community. That's awesome. And he focuses on, you know, like food and education for kids for underprivileged children. 
-SPEAKER 2 0:10:19:679
-And it's not just like, you know, a one-time donation. 
-SPEAKER 1 0:10:22:360
-Yeah, it doesn't seem like it. 
-SPEAKER 2 0:10:24:039
-Or just like a quick photo op. 
-SPEAKER 1 0:10:26:279
-Yeah. 
-SPEAKER 2 0:10:27:120
-Like we have photos of him like actually serving meals. 
-SPEAKER 1 0:10:30:240
-That's amazing. 
-SPEAKER 2 0:10:31:080
-Participating in these like food drives. 
-SPEAKER 1 0:10:33:120
-Yeah. 
-SPEAKER 2 0:10:33:960
-And even like getting his hands dirty, like planting trees. That's great. This isn't someone who's just like, you know, checking a box. Right. 
-SPEAKER 1 0:10:41:679
-This is a sustained commitment. 
-SPEAKER 2 0:10:43:679
-It seems like it. To giving back. Yeah. What are your thoughts about this side of Ritik? 
-SPEAKER 1 0:10:49:279
-I think it's amazing, you know. It tells me he's somebody who really sees the big picture. Yeah. That he's driven by the sense of social responsibility, you know. Yeah. It's about using what you have, you know, and resources to help, you know, uplift those around you. 
-SPEAKER 2 0:11:07:440
-It really is. It's like that saying, you can tell a lot about a person by how they treat those who can do nothing for them. 
-SPEAKER 1 0:11:14:000
-Yeah, 100%. 
-SPEAKER 2 0:11:15:159
-And in this case, it says so much about Ritik. 
-SPEAKER 1 0:11:18:360
-It really does. It paints a picture of someone who is like really aware. Yeah. You know, who sees beyond just like the screen. 
-SPEAKER 2 0:11:26:600
-Right. 
-SPEAKER 1 0:11:27:440
-Who recognizes the impact, the human impact that technology has. Yeah. Who's really trying to make a difference. And to me, that's inspiring. Absolutely. 
-SPEAKER 2 0:11:36:679
-It's a good reminder that, you know, it's not just about algorithms and code. It's about people. 
-SPEAKER 1 0:11:43:200
-100%. 
-SPEAKER 2 0:11:44:159
-So, I mean, we've uncovered so much about Ritik. 
-SPEAKER 1 0:11:47:200
-We really have. 
-SPEAKER 2 0:11:48:080
-His ambition, how versatile he is, you know, his talent when it comes to the technical stuff, and this huge heart of his. 
-SPEAKER 1 0:11:55:399
-Yeah. 
-SPEAKER 2 0:11:56:240
-So if you had to sum them up for someone, you know, like if they just walked in right now and you're like, okay, this is Ritik in three words, what would you say? 
-SPEAKER 1 0:12:04:480
-Oh, that's a tough one. I think I'd go with driven, versatile, and compassionate. 
-SPEAKER 2 0:12:13:000
-Oh, I like it. 
-SPEAKER 1 0:12:13:840
-So driven, because, you know, everything we've seen tells me this is somebody who sets these like ambitious goals and just goes for them. Doesn't stop. Versatile, because he's so comfortable moving between like all these different areas of technology. 
-SPEAKER 2 0:12:27:960
-Really is. 
-SPEAKER 1 0:12:28:799
-Always learning new stuff. And then compassionate, because, you know, that commitment to social impact tells me this is someone who genuinely wants to make a difference for other people. 
-SPEAKER 2 0:12:39:240
-Absolutely. He's not just building a career, he's building a better future. 
-SPEAKER 1 0:12:42:600
-100%, through his work, you know, the things he's building. But also just how he chooses to like live his life and like give back. Absolutely. 
-SPEAKER 2 0:12:52:440
-Now, for everyone listening, I wanna leave you with this. Imagine you could work with Ritik on a project. 
-SPEAKER 1 0:12:59:720
+SPEAKER 1 0:08:03:800
+It's like this vast expanse of water with. 
+SPEAKER 2 0:08:06:300
+Islands and all sorts of marine life. 
+SPEAKER 1 0:08:08:180
+Yeah, you've got the deepest trenches on Earth. Underwater mountains. Incredible biodiversity. 
+SPEAKER 2 0:08:15:220
+So much we still don't know about it. 
+SPEAKER 1 0:08:16:699
+I know. It's a world unto itself. It really is. Okay, ready for another fact? Hit me. All right, this one's about something a little closer to home. 
+SPEAKER 2 0:08:25:139
 Okay. 
-SPEAKER 2 0:13:00:559
-Knowing that you know now. Yeah. His passions, his skills, his ambition. 
-SPEAKER 1 0:13:04:039
+SPEAKER 1 0:08:25:980
+Our own bodies. Ooh, interesting. Prepare to be surprised. Did you know that your nose and ears never start growing? 
+SPEAKER 2 0:08:33:580
+Wait, are you serious? 
+SPEAKER 1 0:08:34:940
+Dead serious. 
+SPEAKER 2 0:08:35:779
+We're all gonna have like giant noses and ears when we're old. 
+SPEAKER 1 0:08:39:500
+Well, not exactly. It's not like they're growing super fast. It's very gradual. 
+SPEAKER 2 0:08:43:179
+But they never stop growing. 
+SPEAKER 1 0:08:44:620
+The cartilage in our noses and ears just keeps growing. And gravity can also play a role making them look longer over time. 
+SPEAKER 2 0:08:52:059
+So it's not just my imagination. My nose and ears are actually getting bigger. 
+SPEAKER 1 0:08:55:379
+They are. 
+SPEAKER 2 0:08:56:500
+That's why. 
+SPEAKER 1 0:08:57:340
+Our bodies are constantly changing. 
+SPEAKER 2 0:08:58:940
+Even in subtle ways. 
+SPEAKER 1 0:09:00:100
+I know, right? It's pretty cool. It's a good reminder that we're all works in progress. I like that. Okay, let's test your mountain knowledge. 
+SPEAKER 2 0:09:07:419
+Okay, bring it on. 
+SPEAKER 1 0:09:08:379
+What is the name of the tallest mountain in the world? 
+SPEAKER 2 0:09:12:059
+Mount Everest, of course. 
+SPEAKER 1 0:09:13:379
+Yes, Mount Everest. But here's a twist. Do you know that Mount Everest is actually still growing? 
+SPEAKER 2 0:09:19:100
+Wait a minute, mountains can grow. 
+SPEAKER 1 0:09:21:019
+They can. 
+SPEAKER 2 0:09:22:139
+How does that even work? 
+SPEAKER 1 0:09:23:259
+Well, the Himalayas, where Mount Everest is located, they're formed by the collision of these two tectonic plates. 
+SPEAKER 2 0:09:29:940
+Indian and Eurasian plates. 
+SPEAKER 1 0:09:31:259
+Exactly. Wow. And that collision is still happening. 
+SPEAKER 2 0:09:34:620
+So they're still pushing against each other. 
+SPEAKER 1 0:09:36:259
+Yep, pushing those mountains upwards. 
+SPEAKER 2 0:09:37:860
+So Mount Everest is getting taller. 
+SPEAKER 1 0:09:40:019
+A few millimeters per year. 
+SPEAKER 2 0:09:41:620
+So millions of years from now. 
+SPEAKER 1 0:09:43:460
+It could be even taller. 
+SPEAKER 2 0:09:44:860
+That's incredible, the forces that shape our planet. 
+SPEAKER 1 0:09:47:379
+It's amazing. Really is. It's a reminder that Earth is constantly evolving. Yeah. What we see today is just like a snapshot. 
+SPEAKER 2 0:09:56:620
+A tiny moment in time. 
+SPEAKER 1 0:09:57:860
+Okay, ready to explore another extreme environment. Let's do it. It's the hottest planet in our solar system. 
+SPEAKER 2 0:10:05:019
+A lot of people would say Mercury, because it's closest to the sun. 
+SPEAKER 1 0:10:08:100
 Right. 
-SPEAKER 2 0:13:04:879
-What kind of project do you think would really get him fired up? Would it be something that's like pushing the limits of AI or maybe tackling a really complex social issue? 
-SPEAKER 1 0:13:15:600
-Oh, that's a good one. 
-SPEAKER 2 0:13:16:440
-Or, you know, what about something that maybe blends together his love for like that game design stuff with his backend knowledge to create, you know, something that's immersive and impactful. 
-SPEAKER 1 0:13:27:759
-The possibilities are endless. And that's like the beauty of what we do here, right? Yes. It's like we've peeled back the layers. Yeah. We've gone beyond just like a resume. Right. And, you know, we've gotten to see the person behind all the code. 
-SPEAKER 2 0:13:40:440
-We've seen the, you know, the enthusiasm that kind of fuels his work. 
-SPEAKER 1 0:13:45:080
-Yes. 
-SPEAKER 2 0:13:45:919
-You know, the huge amount of knowledge that he brings to the table. 
-SPEAKER 1 0:13:48:679
-Right. 
-SPEAKER 2 0:13:49:519
-And the empathy that kind of guides, like everything he does. 
-SPEAKER 1 0:13:52:759
-Yeah. 
-SPEAKER 2 0:13:53:639
-It's a good reminder that technology, at the end of the day, it's a human thing. 
-SPEAKER 1 0:14:00:519
-Yes. 
-SPEAKER 2 0:14:01:360
-You know, it's shaped by our passions, our values, and that desire to, you know, leave things a little bit better than we found them. 
-SPEAKER 1 0:14:07:879
-Absolutely. 100%. So, you know, as you're out there moving through, you know, your own digital world, keep an eye out for people like Ritik, the builders. Yeah, the innovators. The ones who remind us that even in a world with all this like complex code and technology, it's the human connection that matters. 
-SPEAKER 2 0:14:25:480
-Couldn't agree more. 
+SPEAKER 2 0:10:08:940
+But I think it's Venus. 
+SPEAKER 1 0:10:10:379
+You are absolutely right. Yes. Venus. It's so hot. It has this thick atmosphere of carbon dioxide, which traps heat and creates this runaway greenhouse effect. 
+SPEAKER 2 0:10:22:059
+Yeah, it's like a furnace. 
+SPEAKER 1 0:10:23:220
+Surface temperatures on Venus can reach a scorching 867 degrees Fahrenheit. 
+SPEAKER 2 0:10:28:299
+867 degrees. 
+SPEAKER 1 0:10:30:340
+Hot enough to melt lead. 
+SPEAKER 2 0:10:32:500
+You definitely wouldn't want to be caught on Venus without a spacesuit. 
+SPEAKER 1 0:10:35:820
+No, not at all. 
+SPEAKER 2 0:10:36:860
+It makes you appreciate our own planet's atmosphere even more, and how important it is to protect it. 
+SPEAKER 1 0:10:41:740
+It really does. 
+SPEAKER 2 0:10:42:740
+Venus is a good example of what can happen. 
+SPEAKER 1 0:10:44:539
+When things get out of control. 
+SPEAKER 2 0:10:45:899
+Exactly, a runaway greenhouse effect. 
+SPEAKER 1 0:10:47:740
+Not good. Definitely not good. Welcome back to the deep dive. Hard to believe we're already at the final part of our trivia journey. 
+SPEAKER 2 0:10:56:059
+I know, right? It's flown by. But we've saved some of the most mind-bending facts for last. 
+SPEAKER 1 0:11:03:340
+Okay, I'm intrigued. 
+SPEAKER 2 0:11:04:779
+Yeah, these are the ones that really make you kind of stop and think. 
+SPEAKER 1 0:11:08:259
+All right, lay it on me. What kind of revelation are we talking about? 
+SPEAKER 2 0:11:11:860
+Well, let's talk about something we all kind of take for granted. 
+SPEAKER 1 0:11:14:179
+Okay. 
+SPEAKER 2 0:11:15:019
+Water. 
+SPEAKER 1 0:11:15:840
+Water, okay. 
+SPEAKER 2 0:11:16:899
+Did you know that clean, drinkable water, the kind we need, only makes up about 3% of all the water on Earth? 
+SPEAKER 1 0:11:25:620
+3%, that's it. 
+SPEAKER 2 0:11:27:179
+Yeah, it's a tiny amount. 
+SPEAKER 1 0:11:29:059
+Wow, I knew most of Earth's water was salt water. 
+SPEAKER 2 0:11:30:940
+Right, the oceans. 
+SPEAKER 1 0:11:31:779
+But I never realized the percentage of fresh water was that low. 
+SPEAKER 2 0:11:35:179
+Yeah, it's pretty shocking when you think about it. 
+SPEAKER 1 0:11:37:340
+It is. 
+SPEAKER 2 0:11:38:179
+The vast majority of it, it's locked up in glaciers and ice caps and underground. 
+SPEAKER 1 0:11:41:659
+And we only have 3% to work with. 
+SPEAKER 2 0:11:44:100
+The water we depend on for everything, drinking, growing crops, industries. 
+SPEAKER 1 0:11:48:779
+It really makes you think about how we use water. It does. We need to be so much more careful. 
+SPEAKER 2 0:11:53:580
+Absolutely, conserve it, protect it. 
+SPEAKER 1 0:11:55:500
+Yeah, not just for us, but for everyone in the future. Exactly, it's a precious resource. Okay, ready for another fact? I am, bring it on. Let's go back to the animal kingdom for this one. Sounds good. Did you know that a group of owls is called a parliament? A parliament of hours. A parliament. I love that. I know, it's so fitting. It's perfect. Like all these wise owls gathered together. Sharing their wisdom. Debating important owl matters. I can just picture it. It's a whimsical name. It is. But owls are fascinating creatures. They are, always been a bit mysterious. I have things that have been around for a while. Let's talk about something most of us use every day. All right. Keyboards. 
+SPEAKER 2 0:12:34:320
+Keyboards, okay. 
+SPEAKER 1 0:12:35:159
+Did you know that the Korty keyboard layout? 
+SPEAKER 2 0:12:38:299
+The one we use all the time. 
+SPEAKER 1 0:12:39:379
+One we all know and love? Yeah. Was actually designed to slow typists down. 
+SPEAKER 2 0:12:43:539
+Wait, really? 
+SPEAKER 1 0:12:44:620
+Yep. Why would they do that? Well, back in the days of typewriters, if you typed too fast, the keys would jam. 
+SPEAKER 2 0:12:53:019
+Ah, I see. 
+SPEAKER 1 0:12:54:080
+So Christopher Scholes, the guy who invented the Korty keyboard. The Mark guy. He came up with this arrangement where he put the most commonly used letters far apart. 
+SPEAKER 2 0:13:03:779
+So people wouldn't type as fast. 
+SPEAKER 1 0:13:05:539
+Exactly, to prevent those jams. 
+SPEAKER 2 0:13:07:860
+That's so interesting. 
+SPEAKER 1 0:13:08:899
+It's amazing, right? 
+SPEAKER 2 0:13:09:740
+It is, and we're still using it today. 
+SPEAKER 1 0:13:11:940
+I know, it's like this legacy. 
+SPEAKER 2 0:13:13:899
+Yeah, from a time when typewriters ruled the world. 
+SPEAKER 1 0:13:17:220
+It makes you think about how human ingenuity can have these lasting effects. 
+SPEAKER 2 0:13:23:379
+Absolutely, even simple inventions. 
+SPEAKER 1 0:13:25:299
+Okay, I'm ready for my last fact. 
+SPEAKER 2 0:13:27:259
+Let's finish strong. 
+SPEAKER 1 0:13:28:259
+Kick me with it. 
+SPEAKER 2 0:13:29:100
+Okay, here we go. What is the name of the largest rainforest in the world? 
+SPEAKER 1 0:13:34:460
+The Amazon rainforest. 
+SPEAKER 2 0:13:36:139
+You got it. 
+SPEAKER 1 0:13:36:980
+Often called the lungs of the planet. 
+SPEAKER 2 0:13:38:580
+It's so important. 
+SPEAKER 1 0:13:39:419
+I know. 
+SPEAKER 2 0:13:40:259
+Plays a huge role in regulating our climate, absorbs carbon dioxide, produces oxygen. 
+SPEAKER 1 0:13:45:700
+And it's home to so much life. 
+SPEAKER 2 0:13:47:139
+An incredible array of plants and animals. 
+SPEAKER 1 0:13:49:620
+So much biodiversity. 
+SPEAKER 2 0:13:51:299
+It's a reminder that we need to protect these places. 
+SPEAKER 1 0:13:54:139
+We do. These ecosystems. We're fragile. 
+SPEAKER 2 0:13:56:620
+It's essential for the health of the whole planet. 
+SPEAKER 1 0:13:58:580
+I totally agree, it's all interconnected. 
+SPEAKER 2 0:14:00:539
+It really is. 
+SPEAKER 1 0:14:01:379
+Well, we've explored so many different facts today. 
+SPEAKER 2 0:14:03:740
+We have. From koala fingerprints to the Amazon rainforest. 
+SPEAKER 1 0:14:07:620
+It's been a wild ride. 
+SPEAKER 2 0:14:09:100
+I feel like my brain has gotten a good workout. 
+SPEAKER 1 0:14:10:940
+Me too. My curiosity muscles are definitely feeling flexed. 
+SPEAKER 2 0:14:14:539
+That's what we like to hear. 
+SPEAKER 1 0:14:15:899
+So to everyone listening out there, keep exploring, keep questioning, keep learning. 
+SPEAKER 2 0:14:22:299
+The world is full of fascinating things. 
+SPEAKER 1 0:14:24:299
+You never know what amazing discoveries are waiting for you. 
+SPEAKER 2 0:14:26:980
+Just around the corner. 
+SPEAKER 1 0:14:28:179
+Thanks for joining us on this knowledge-packed adventure. 
+SPEAKER 2 0:14:31:100
+It's been a pleasure. 
+SPEAKER 1 0:14:32:039
+Until next time, keep those curiosity muscles engaged. 
