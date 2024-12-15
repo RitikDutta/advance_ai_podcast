@@ -7,6 +7,7 @@ from parser import get_total_seconds_from_transcript
 
 
 if __name__ == "__main__":
+    exception_count = 0
 
     transcript_file = 'transcript.txt'
     total_seconds = get_total_seconds_from_transcript(transcript_file)
@@ -31,23 +32,22 @@ if __name__ == "__main__":
     print("Running re-encoding of animations...")
     run_re_encode(base_dir="animations")
 
-    # Run 'man' video generation with probabilities
-    print("Running man video creation...")
-    run_man(total_duration, transcript_path, "animations/man",
-            sip_coffee_prob, nod_prob, yes_long_prob, fill_prob)
+    try:
 
-    # Re-encode animations if needed
-    print("Running re-encoding of animations...")
-    run_re_encode(base_dir="animations")
+        # Run 'man' video generation with probabilities
+        print("Running man video creation...")
+        run_man(total_duration, transcript_path, "animations/man",
+                sip_coffee_prob, nod_prob, yes_long_prob, fill_prob)
 
-    # Run 'girl' video generation with probabilities (no sip_coffee)
-    print("Running girl video creation...")
-    run_girl(total_duration, transcript_path, "animations",
-             girl_nod_prob, girl_yes_long_prob, girl_fill_prob)
+        # Run 'girl' video generation with probabilities (no sip_coffee)
+        print("Running girl video creation...")
+        run_girl(total_duration, transcript_path, "animations",
+                 girl_nod_prob, girl_yes_long_prob, girl_fill_prob)
 
-    # Re-encode animations if needed
-    print("Running re-encoding of animations...")
-    run_re_encode(base_dir="animations")
+    except:
+        exception_count += 1
+        print("*"*20)
+        print(f"Exceton {excetion_count} skipping")
 
     # Combine the two videos
     print("Running video combination...")
