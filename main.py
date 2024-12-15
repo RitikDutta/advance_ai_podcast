@@ -47,9 +47,12 @@ if __name__ == "__main__":
     except:
         exception_count += 1
         print("*"*20)
-        print(f"Exceton {excetion_count} skipping")
+        print(f"Exceton {exception_count} skipping")
 
+
+    print(exception_count)
     # Combine the two videos
     print("Running video combination...")
     run_combine(girl_path='girl.mp4', man_path='man.mp4', output_path='combined_video.mp4')
+    print(exception_count)
 
