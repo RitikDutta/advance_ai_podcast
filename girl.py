@@ -62,10 +62,20 @@ def get_animations(root_dir):
                 with_lip_path = os.path.join(dirpath, wl_file)
                 without_lip_path = os.path.join(dirpath, without_lip_file)
 
-                with_lip_clip = VideoFileClip(with_lip_path)
-                without_lip_clip = VideoFileClip(without_lip_path)
-                anim_duration = with_lip_clip.duration
+                try:
+                    with_lip_clip = VideoFileClip(with_lip_path)
+                except OSError as e:
+                    print(f"[WARNING] Could not load '{with_lip_path}': {e}")
+                    continue
 
+                try:
+                    without_lip_clip = VideoFileClip(without_lip_path)
+                except OSError as e:
+                    print(f"[WARNING] Could not load '{without_lip_path}': {e}")
+                    with_lip_clip.close()
+                    continue
+
+                anim_duration = with_lip_clip.duration
                 category = determine_category(dirpath, wl_file)
                 animations.append({
                     'with_lip_move': with_lip_clip,

@@ -38,10 +38,6 @@ def parse_transcript(filename, total_duration):
     return segments
 
 def determine_category(dirpath, filename):
-    # Determine animation category from directory name or filename.
-    # Adjust logic as needed for your file structure.
-    # Example assumption: directories might be named after categories:
-    # animations/man/fill, animations/man/nod, animations/man/yes_long, animations/man/sip_coffee
     lower_path = dirpath.lower()
     if 'sip_coffee' in lower_path:
         return 'sip_coffee'
@@ -65,11 +61,22 @@ def get_animations(root_dir):
                 with_lip_path = os.path.join(dirpath, wl_file)
                 without_lip_path = os.path.join(dirpath, without_lip_file)
 
-                with_lip_clip = VideoFileClip(with_lip_path)
-                without_lip_clip = VideoFileClip(without_lip_path)
-                anim_duration = with_lip_clip.duration
+                try:
+                    with_lip_clip = VideoFileClip(with_lip_path)
+                except OSError as e:
+                    print(f"[WARNING] Could not load '{with_lip_path}': {e}")
+                    continue
 
+                try:
+                    without_lip_clip = VideoFileClip(without_lip_path)
+                except OSError as e:
+                    print(f"[WARNING] Could not load '{without_lip_path}': {e}")
+                    with_lip_clip.close()
+                    continue
+
+                anim_duration = with_lip_clip.duration
                 category = determine_category(dirpath, wl_file)
+                
                 animations.append({
                     'with_lip_move': with_lip_clip,
                     'without_lip_move': without_lip_clip,
@@ -98,15 +105,13 @@ def run_man(total_duration, transcript_path, animation_path,
     animations = get_animations(animation_path)
 
     if not animations:
-        print("[ERROR] No animations found. Exiting.")
+        print("[ERROR] No animations found after loading attempts. Exiting.")
         return
 
     print("[INFO] Animations loaded successfully.")
     print("------------------------------------------------------------")
 
-    # Function to select an animation with weighted probabilities based on category
     def pick_animation():
-        # Calculate weights for each animation based on its category
         weights = []
         for anim in animations:
             cat = anim['category']
@@ -119,16 +124,14 @@ def run_man(total_duration, transcript_path, animation_path,
             elif cat == 'fill':
                 w = fill_prob
             else:
-                w = fill_prob  # default fallback
-
+                w = fill_prob  # fallback
             weights.append(w)
-        # Use random.choices with these weights
         return random.choices(animations, weights=weights, k=1)[0]
 
     print("[INFO] Building the video timeline...")
-    current_time = 0
-    current_animation = pick_animation()  # pick initial animation with weights
-    current_animation_position = 0
+    current_time = 0.0
+    current_animation = pick_animation()
+    current_animation_position = 0.0
     current_segment_index = 0
     current_speaker = segments[current_segment_index]['speaker'] if segments else 'SPEAKER 1'
     video_clips = []
@@ -140,16 +143,13 @@ def run_man(total_duration, transcript_path, animation_path,
         else:
             next_speaker_change_time = total_duration
 
-        # Determine when the current animation ends
         current_animation_duration = current_animation['duration']
         time_remaining_in_animation = current_animation_duration - current_animation_position
         next_animation_end_time = current_time + time_remaining_in_animation
 
-        # Determine the next event time
         next_event_time = min(next_speaker_change_time, next_animation_end_time, total_duration)
         duration = next_event_time - current_time
 
-        # Select the appropriate video version
         if current_speaker == 'SPEAKER 2':
             source_clip = current_animation['with_lip_move']
             clip_type = "_with_lip_move"
@@ -158,16 +158,14 @@ def run_man(total_duration, transcript_path, animation_path,
             clip_type = "_without_lip_move"
 
         print(f"[CLIP] Adding from {current_time:.2f}s to {next_event_time:.2f}s "
-              f"({duration:.2f}s) using {os.path.basename(source_clip.filename)} [{current_animation['category']}{clip_type}]")
+              f"({duration:.2f}s) [{current_animation['category']}{clip_type}]")
 
-        # Extract the subclip from the preloaded clip
         clip = source_clip.subclip(current_animation_position, current_animation_position + duration)
         video_clips.append(clip)
 
         current_time = next_event_time
         current_animation_position += duration
 
-        # Handle speaker change
         if abs(current_time - next_speaker_change_time) < 0.001:
             if current_segment_index < len(segments):
                 old_speaker = current_speaker
@@ -182,15 +180,13 @@ def run_man(total_duration, transcript_path, animation_path,
             else:
                 current_speaker = 'SPEAKER 1'
 
-        # Handle animation end
         if abs(current_time - next_animation_end_time) < 0.001:
             print("------------------------------------------------------------")
             print(f"[ANIMATION ENDED] Switching to a new animation at {current_time:.2f}s")
             print("------------------------------------------------------------")
             current_animation = pick_animation()
-            current_animation_position = 0
+            current_animation_position = 0.0
 
-        # Print progress every 10 seconds
         if int(current_time) % 10 == 0:
             progress = print_progress_bar(current_time, total_duration)
             print(f"[PROGRESS] {progress}")
