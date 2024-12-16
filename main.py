@@ -27,9 +27,9 @@ if __name__ == "__main__":
     girl_yes_long_prob = 0.25
     girl_fill_prob = 0.75
 
-    # Re-encode animations if needed
-    print("Running re-encoding of animations...")
-    run_re_encode(base_dir="animations")
+    # # Re-encode animations if needed
+    # print("Running re-encoding of animations...")
+    # run_re_encode(base_dir="animations")
 
     # Run 'man' video generation with probabilities
     print("Running man video creation...")
