@@ -64,15 +64,27 @@ def get_animations(root_dir):
 
                 try:
                     with_lip_clip = VideoFileClip(with_lip_path)
-                except OSError as e:
+                except Exception as e:
                     print(f"[WARNING] Could not load '{with_lip_path}': {e}")
                     continue
 
                 try:
                     without_lip_clip = VideoFileClip(without_lip_path)
-                except OSError as e:
+                except Exception as e:
                     print(f"[WARNING] Could not load '{without_lip_path}': {e}")
                     with_lip_clip.close()
+                    continue
+
+                # Attempt to read at least one frame from each clip to verify integrity
+                try:
+                    # Read first frame from with_lip_clip
+                    next(with_lip_clip.iter_frames())
+                    # Read first frame from without_lip_clip
+                    next(without_lip_clip.iter_frames())
+                except Exception as e:
+                    print(f"[WARNING] One of the clips '{with_lip_path}' or '{without_lip_path}' failed to read a frame: {e}")
+                    with_lip_clip.close()
+                    without_lip_clip.close()
                     continue
 
                 anim_duration = with_lip_clip.duration
@@ -171,7 +183,6 @@ def run_girl(total_duration, transcript_path, animation_path,
         # Check events at current_time
         # Speaker change event
         if abs(current_time - next_speaker_change_time) < 0.001 and current_time < total_duration:
-            # Move to next segment if available
             if current_segment_index < len(segments):
                 old_speaker = current_speaker
                 current_segment_index += 1
