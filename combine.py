@@ -1,7 +1,7 @@
 import os
 from moviepy.editor import VideoFileClip, clips_array
 
-def run_combine(girl_path='girl.mp4', man_path='man.mp4', output_path='combined_video.mp4'):
+def run_combine(girl_path='test/female.mp4', man_path='test/male.mp4', output_path='combined_video.mp4'):
     print("============================================================")
     print("[INFO] Combining the two videos side by side.")
     print(f"[INFO] Girl Video: {girl_path}")
@@ -38,3 +38,6 @@ def run_combine(girl_path='girl.mp4', man_path='man.mp4', output_path='combined_
     print("[INFO] Combined video created successfully!")
     print(f"[INFO] Output: {output_path}")
     print("============================================================")
+
+
+run_combine()
