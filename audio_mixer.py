@@ -61,12 +61,12 @@ class Audio_mixer:
             print(f"[Exception] An error occurred while processing '{audio_path.name}': {e}")
 
     def mix_audio(self):
-        parser = argparse.ArgumentParser(description="Join WAV audio files from 'audio' folder with 'combined_video.mp4'.")
+        parser = argparse.ArgumentParser(description="Join WAV audio files from 'audio' folder with 'combined_video/combined_video.mp4'.")
         parser.add_argument(
             '--video',
             type=str,
-            default='combined_video.mp4',
-            help="Path to the input video file (default: 'combined_video.mp4')."
+            default='combined_video/combined_video.mp4',
+            help="Path to the input video file (default: 'combined_video/combined_video.mp4')."
         )
         parser.add_argument(
             '--audio_folder',
