@@ -2,3 +2,6 @@ __pycache__/
 *.json
 GOOGLE_API_KEY.json
 .env
+test/
+flow/
+temp_merge_*/
