@@ -11,21 +11,21 @@ from parser import Time_parser
 # print('\ntotal_time\n', total_time)
 
 
-sequencer = Sequencer(40, True)
+sequencer = Sequencer(2, True)
 sequencer.create_sequence('female')
 
-sequencer2 = Sequencer(40, False)
+sequencer2 = Sequencer(2, False)
 sequencer2.create_sequence('male')
 
 Concat_vids(25).concat_vids()
 
 Combine_vids().run_combine()
 
-# Audio_mixer().mix_audio()
+Audio_mixer().mix_audio()
 
-# title, desc = Generate_title().generate_content()
+title, desc = Generate_title().generate_content()
 
-# print(f'Uploading to Youtube ... \n\n {title} \n\n\n {desc}')
+print(f'Uploading to Youtube ... \n\n {title} \n\n\n {desc}')
 
 # uploader = YouTubeUploader()
 # uploader.authenticate()
