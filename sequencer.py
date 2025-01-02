@@ -4,7 +4,7 @@ from scan_path import ScanPath
 import random
 
 scan_path = ScanPath()
-helper = TranscriptHelper('transcript.txt')
+helper = TranscriptHelper('transcript/transcript.txt')
 video_ops = VideoOps()
 
 
@@ -67,7 +67,7 @@ class Sequencer:
             with_lip = 1
             without_lip = 0
 
-        while i self.iterations:
+        while i <= len(turn_time):
             print('-' * 20)
 
             # 1) Pick an animation or use remaining clipped video:
