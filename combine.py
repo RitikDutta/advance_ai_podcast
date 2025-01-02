@@ -3,7 +3,7 @@ from moviepy.editor import VideoFileClip, clips_array
 
 class Combine_vids:
 
-    def run_combine(self, girl_path='test/female.mp4', man_path='test/male.mp4', output_path='combined_video.mp4'):
+    def run_combine(self, girl_path='test/female.mp4', man_path='test/male.mp4', output_path='combined_video/combined_video.mp4'):
         print("============================================================")
         print("[INFO] Combining the two videos side by side.")
         print(f"[INFO] Girl Video: {girl_path}")
