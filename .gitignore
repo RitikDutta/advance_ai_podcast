@@ -5,3 +5,6 @@ GOOGLE_API_KEY.json
 test/
 flow/
 temp_merge_*/
+.directory
+audio/
+output/
