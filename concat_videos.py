@@ -2,8 +2,8 @@ import os
 import re
 import uuid
 import shutil
+import subprocess
 from math import ceil
-from moviepy.editor import VideoFileClip, concatenate_videoclips
 
 class Concat_vids:
 
@@ -78,35 +78,57 @@ class Concat_vids:
 
     def _merge_clips(self, video_paths, output_path, progress_prefix=""):
         """
-        Merge given video_paths at once and write to output_path.
+        Merge given video_paths at once and write to output_path using ffmpeg.
+        This uses the concat demuxer for precise timing (in ms) and re-encodes
+        using libx264 and AAC to ensure consistent output.
         """
-        clips = []
         total = len(video_paths)
         print(f"{progress_prefix}Merging {total} clip(s) into '{output_path}'...")
 
-        for i, vp in enumerate(video_paths, start=1):
-            print(f"{progress_prefix}  Loading clip {i}/{total}: {vp}")
-            try:
-                clip = VideoFileClip(vp)
-                clips.append(clip)
-            except Exception as e:
-                print(f"{progress_prefix}  Error loading '{vp}': {e}")
-
-        if not clips:
+        # If no valid videos, skip
+        if not video_paths:
             print(f"{progress_prefix}No valid clips found, skipping merge.")
             return
 
+        # Create a temporary text file for the ffmpeg concat demuxer
+        # Put it in the same folder as output_path to avoid permission issues
+        tmp_dir = os.path.dirname(os.path.abspath(output_path)) or '.'
+        list_file = os.path.join(tmp_dir, f"concat_list_{uuid.uuid4()}.txt")
+
         try:
-            final_clip = concatenate_videoclips(clips, method="compose")
-            final_clip.write_videofile(output_path, codec="libx264", audio_codec="aac")
-        except Exception as e:
-            print(f"{progress_prefix}Error during concatenation: {e}")
+            with open(list_file, 'w', encoding='utf-8') as f:
+                for i, vp in enumerate(video_paths, start=1):
+                    print(f"{progress_prefix}  Adding clip {i}/{total}: {vp}")
+                    # Surround paths in single-quotes to handle spaces/special chars
+                    f.write(f"file '{os.path.abspath(vp)}'\n")
+
+            # Build ffmpeg command
+            cmd = [
+                'ffmpeg',
+                '-y',
+                '-f', 'concat',
+                '-safe', '0',
+                '-i', list_file,
+                # Encode with libx264 for video and AAC for audio
+                '-c:v', 'libx264',
+                '-c:a', 'aac',
+                # Ensures the MP4 is properly hinted for streaming
+                '-movflags', '+faststart',
+                # You can tune/override parameters below to suit your quality/bitrate needs
+                output_path
+            ]
+
+            print(f"{progress_prefix}Running ffmpeg command:")
+            print(" ".join(cmd))
+            
+            subprocess.run(cmd, check=True)
+
+        except subprocess.CalledProcessError as e:
+            print(f"{progress_prefix}Error during ffmpeg concatenation: {e}")
         finally:
-            # Release resources
-            for c in clips:
-                c.close()
-            if 'final_clip' in locals():
-                final_clip.close()
+            # Clean up the temporary list file
+            if os.path.exists(list_file):
+                os.remove(list_file)
 
     def concatenate_videos(self, folder_path, output_path):
         """
@@ -146,5 +168,3 @@ class Concat_vids:
 
             print(f"\n--- Concatenating videos for: {category} ---")
             self.concatenate_videos(input_folder, output_video)
-
-
