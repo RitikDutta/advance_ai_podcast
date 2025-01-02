@@ -85,7 +85,7 @@ class Generate_title:
     # TODO Make these files available on the local file system
     # You may need to update the file paths
     files = [
-      self.upload_to_gemini("transcript.txt", mime_type="text/plain"),
+      self.upload_to_gemini("transcript/transcript.txt", mime_type="text/plain"),
     ]
 
     # Some files have a processing delay. Wait for them to be ready.
