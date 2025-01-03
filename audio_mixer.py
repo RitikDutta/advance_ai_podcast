@@ -5,7 +5,6 @@ import sys
 
 
 class Audio_mixer:
-
     def join_audio_video_ffmpeg(self, video_path, audio_path, output_path, audio_start_time=0):
         """
         Joins a WAV audio file with a video file using FFmpeg.
@@ -61,7 +60,7 @@ class Audio_mixer:
             print(f"[Exception] An error occurred while processing '{audio_path.name}': {e}")
 
     def mix_audio(self):
-        parser = argparse.ArgumentParser(description="Join WAV audio files from 'audio' folder with 'combined_video/combined_video.mp4'.")
+        parser = argparse.ArgumentParser(description="Join a '_modified' WAV audio file from 'audio' folder with 'combined_video/combined_video.mp4'.")
         parser.add_argument(
             '--video',
             type=str,
@@ -116,21 +115,30 @@ class Audio_mixer:
             print(f"[Info] The output folder '{output_folder}' does not exist. Creating it.")
             output_folder.mkdir(parents=True, exist_ok=True)
 
-        # Iterate through each WAV audio file in the audio folder
-        audio_files = sorted(audio_folder.glob(f'*{audio_extension}'))
-        if not audio_files:
-            print(f"[Warning] No audio files with extension '{audio_extension}' found in '{audio_folder}'.")
+        # Search for the '_modified' audio file
+        modified_audio_files = sorted(audio_folder.glob(f'*_modified{audio_extension}'))
+
+        if not modified_audio_files:
+            print(f"[Error] No audio files with suffix '_modified{audio_extension}' found in '{audio_folder}'.")
+            sys.exit(1)
+        elif len(modified_audio_files) > 1:
+            print(f"[Error] Multiple audio files with suffix '_modified{audio_extension}' found in '{audio_folder}'. Please ensure only one exists.")
             sys.exit(1)
 
-        print(f"\n[Info] Found {len(audio_files)} audio file(s) in '{audio_folder}'.")
+        modified_audio_file = modified_audio_files[0]
+        print(f"\n[Info] Found modified audio file: '{modified_audio_file.name}'")
         print(f"[Info] Output videos will be saved in '{output_folder}'.")
 
-        for audio_file in audio_files:
-            # Define the output video filename
-            # Example: combined_video_with_audio1.mp4
-            output_filename = "test.mp4"   #temp test 
-            output_path = output_folder / output_filename
+        # Define the output video filename
+        # Example: name_modified -> name_modified_output.mp4
+        base_name = modified_audio_file.stem  # e.g., 'name_modified'
+        output_filename = f"{base_name}_output.mp4"
+        output_path = output_folder / output_filename
 
-            # Join audio and video
-            self.join_audio_video_ffmpeg(video_path, audio_file, output_path, audio_start_time)
+        # Join audio and video
+        self.join_audio_video_ffmpeg(video_path, modified_audio_file, output_path, audio_start_time)
 
+
+if __name__ == "__main__":
+    mixer = AudioMixer()
+    mixer.mix_audio()
