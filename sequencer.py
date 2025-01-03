@@ -67,7 +67,7 @@ class Sequencer:
             with_lip = 1
             without_lip = 0
 
-        while i <= len(turn_time) and i < self.iterations:
+        while i < len(turn_time): #and i < self.iterations:
             print('-' * 20)
 
             # 1) Pick an animation or use remaining clipped video:
