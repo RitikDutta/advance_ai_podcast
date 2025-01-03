@@ -74,7 +74,7 @@ class Sequencer:
             with_lip = 1
             without_lip = 0
 
-        while i < len(turn_time): #and i < self.iterations:
+        while i < self.iterations:
             print('-' * 20)
 
             # 1) Pick an animation or use remaining clipped video:
@@ -85,6 +85,7 @@ class Sequencer:
             else:
                 # Otherwise pick a new random (or fixed index) choice
                 choice = picker.run_weighted_picker(possible_choices, weights)  
+                print('choice', choice)
                 animation_duration = animations_dict[role][choice]['duration_ms']
                 print(f"picked {choice} of {animation_duration} ms through random choice\n")
 
