@@ -20,7 +20,7 @@ sequencer.create_sequence('female')
 sequencer2 = Sequencer(False, 5)
 sequencer2.create_sequence('male')
 
-Concat_vids(200).concat_vids()
+Concat_vids().concat_vids()
 
 Combine_vids().run_combine()
 
@@ -32,17 +32,17 @@ title, desc = Generate_title().generate_content()
 
 print(f'Uploading to Youtube ... \n\n {title} \n\n\n {desc}')
 
-uploader = YouTubeUploader()
-uploader.authenticate()
-try:
-    uploader.upload_video(
-        file_path="output/test.mp4",  # Required
-        title=title,            # Required
-        description=desc,  # Required
-        category="24",                       # 24 Entertainment"
-        keywords="python,youtube,upload",     # Optional, default is ""
-        privacy_status="public",             # Optional, default is "public"
-    )
-except Exception as e:
-    print(f"An error occurred: {e}")
-    sys.exit(1)
+# uploader = YouTubeUploader()
+# uploader.authenticate()
+# try:
+#     uploader.upload_video(
+#         file_path="output/test.mp4",  # Required
+#         title=title,            # Required
+#         description=desc,  # Required
+#         category="24",                       # 24 Entertainment"
+#         keywords="python,youtube,upload",     # Optional, default is ""
+#         privacy_status="public",             # Optional, default is "public"
+#     )
+# except Exception as e:
+#     print(f"An error occurred: {e}")
+#     sys.exit(1)
