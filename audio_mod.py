@@ -32,7 +32,7 @@ class Audio_mod:
 
         return output
 
-    def process_audio_files(input_folder='audio', output_suffix='_modified', gap_ms=200, interval_ms=60000):
+    def process_audio_files(self, input_folder='audio', output_suffix='_modified', gap_ms=200, interval_ms=60000):
         """
         Processes all WAV files in the specified folder by adding silence gaps.
 
@@ -65,7 +65,7 @@ class Audio_mod:
                 audio = AudioSegment.from_wav(input_path)
 
                 # Add silence gaps
-                modified_audio = add_silence_gap(audio, gap_duration_ms=gap_ms, interval_ms=interval_ms)
+                modified_audio = self.add_silence_gap(audio, gap_duration_ms=gap_ms, interval_ms=interval_ms)
 
                 # Prepare the output file name
                 name, ext = os.path.splitext(file_name)
@@ -78,11 +78,3 @@ class Audio_mod:
 
             except Exception as e:
                 print(f"Failed to process '{file_name}': {e}\n")
-
-if __name__ == "__main__":
-    process_audio_files(
-        input_folder='audio',       # Folder containing WAV files
-        output_suffix='_modified',  # Suffix for the output files
-        gap_ms=200,                 # Gap duration in milliseconds
-        interval_ms=60000           # Interval duration in milliseconds (1 minute)
-    )
