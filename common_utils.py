@@ -18,6 +18,7 @@ class CommonUtils:
     def run_weighted_picker(self, numbers, probabilities):
         selected_number = self.weighted_pick(numbers, probabilities)
         print(f"Selected number: {selected_number}")
+        return selected_number
 
 if __name__ == "__main__":
     numbers = [2, 5, 6, 7]
