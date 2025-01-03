@@ -4,7 +4,7 @@ import json
 import sys
 
 class Combine_vids:
-    
+
     def get_video_resolution(self, video_path):
         """
         Retrieves the width and height of the video using FFprobe.
@@ -109,10 +109,10 @@ class Combine_vids:
 
     def run_combine(self):
         # Define paths
-        test_folder = 'test'
-        female_video = os.path.join(test_folder, 'female.mp4')
-        male_video = os.path.join(test_folder, 'male.mp4')
-        output_video = os.path.join(test_folder, 'joined.mp4')
+        input_folder = 'test'
+        female_video = os.path.join(input_folder, 'female.mp4')
+        male_video = os.path.join(input_folder, 'male.mp4')
+        output_video = os.path.join('combined_video', 'combined_video.mp4')
 
         # Check if input files exist
         if not os.path.isfile(female_video):
