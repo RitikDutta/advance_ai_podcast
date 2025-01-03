@@ -2,12 +2,12 @@ from transcript_helper import TranscriptHelper
 from video_ops import VideoOps
 from scan_path import ScanPath
 import random
-from common_utils import WeightedPicker
+from common_utils import CommonUtils
 
 scan_path = ScanPath()
 helper = TranscriptHelper('transcript/transcript.txt')
 video_ops = VideoOps()
-picker = WeightedPicker()
+picker = CommonUtils()
 
 class Sequencer:
     def __init__(self, is_speaker1_man, iterations=0):
@@ -84,7 +84,7 @@ class Sequencer:
                 print(f"picked {choice} of {animation_duration} ms (the last remaining video)\n")
             else:
                 # Otherwise pick a new random (or fixed index) choice
-                choice = picker.pick(possible_choices, weights)  
+                choice = picker.run_weighted_picker(possible_choices, weights)  
                 animation_duration = animations_dict[role][choice]['duration_ms']
                 print(f"picked {choice} of {animation_duration} ms through random choice\n")
 
