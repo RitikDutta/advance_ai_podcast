@@ -4,13 +4,14 @@ import uuid
 import shutil
 import subprocess
 from math import ceil
+from tqdm import tqdm  # pip install tqdm
 
 class Concat_vids:
 
     def __init__(self, chunk_size=5):
         """
         :param chunk_size: Number of videos to concatenate at a time
-                           before writing intermediate output. Adjust 
+                           before writing intermediate output. Adjust
                            based on your available RAM and video sizes.
         """
         self.chunk_size = chunk_size
@@ -20,7 +21,7 @@ class Concat_vids:
         Generates a key for natural sorting.
         Splits the string into a list of integers and non-integer substrings.
         """
-        return [int(text) if text.isdigit() else text.lower() 
+        return [int(text) if text.isdigit() else text.lower()
                 for text in re.split(r'(\d+)', s)]
 
     def _chunkify(self, lst, n):
@@ -30,103 +31,87 @@ class Concat_vids:
         for i in range(0, len(lst), n):
             yield lst[i:i + n]
 
-    def concatenate_videos_in_chunks(self, video_paths, output_path, progress_prefix=""):
+    def concatenate_videos_in_chunks(self, video_paths, output_path):
         """
         Concatenate the given list of video_paths into output_path using chunked approach.
+        Uses a recursive approach to handle large sets of videos.
         """
         if not video_paths:
-            print(f"{progress_prefix}No videos to concatenate.")
+            print("No videos to concatenate.")
             return
 
         # If the number of videos <= chunk_size, do a direct merge:
         if len(video_paths) <= self.chunk_size:
-            self._merge_clips(video_paths, output_path, progress_prefix=progress_prefix)
+            self._merge_clips(video_paths, output_path)
             return
 
         # Otherwise, merge in chunks to limit memory usage:
-        # 1) Create temp folder for intermediate chunks
         temp_folder = f"temp_merge_{uuid.uuid4()}"
         os.makedirs(temp_folder, exist_ok=True)
 
-        # 2) Merge each chunk to an intermediate file
         chunk_files = []
         total_chunks = ceil(len(video_paths) / self.chunk_size)
-        chunk_count = 0
 
         for chunk_index, chunk in enumerate(self._chunkify(video_paths, self.chunk_size), start=1):
             chunk_output = os.path.join(temp_folder, f"chunk_{chunk_index}.mp4")
             chunk_files.append(chunk_output)
+            self._merge_clips(chunk, chunk_output)
 
-            chunk_count += 1
-            print(f"{progress_prefix}Processing chunk {chunk_count}/{total_chunks}...")
-            self._merge_clips(chunk, chunk_output, 
-                              progress_prefix=f"{progress_prefix}  -> ")
-
-        # 3) Merge the resulting chunk files into the final output (recursive approach)
-        #    We reuse this same function, so it can again chunk if chunk_files are still too many.
+        # If there's only one intermediate file after chunk-merge, just move it
         if len(chunk_files) == 1:
-            # We only have 1 chunk file, just rename/move it to final output
             shutil.move(chunk_files[0], output_path)
         else:
             # Merge intermediate chunk files into final output
-            self.concatenate_videos_in_chunks(chunk_files, output_path, 
-                                              progress_prefix=f"{progress_prefix}(intermediate) ")
+            self.concatenate_videos_in_chunks(chunk_files, output_path)
 
-        # 4) Cleanup temp folder
         shutil.rmtree(temp_folder, ignore_errors=True)
-        print(f"{progress_prefix}Final merged video saved: {output_path}")
 
-    def _merge_clips(self, video_paths, output_path, progress_prefix=""):
+    def _merge_clips(self, video_paths, output_path):
         """
         Merge given video_paths at once and write to output_path using ffmpeg.
-        This uses the concat demuxer for precise timing (in ms) and re-encodes
-        using libx264 and AAC to ensure consistent output.
+        This uses the concat demuxer for precise timing and re-encodes
+        using libx264 (veryfast preset) and AAC to ensure consistent output.
         """
-        total = len(video_paths)
-        print(f"{progress_prefix}Merging {total} clip(s) into '{output_path}'...")
-
-        # If no valid videos, skip
         if not video_paths:
-            print(f"{progress_prefix}No valid clips found, skipping merge.")
             return
 
-        # Create a temporary text file for the ffmpeg concat demuxer
-        # Put it in the same folder as output_path to avoid permission issues
-        tmp_dir = os.path.dirname(os.path.abspath(output_path)) or '.'
-        list_file = os.path.join(tmp_dir, f"concat_list_{uuid.uuid4()}.txt")
+        list_file = os.path.join(
+            os.path.dirname(os.path.abspath(output_path)) or '.',
+            f"concat_list_{uuid.uuid4()}.txt"
+        )
+
+        # Generate the concat list file
+        with open(list_file, 'w', encoding='utf-8') as f:
+            for vp in video_paths:
+                f.write(f"file '{os.path.abspath(vp)}'\n")
+
+        # We can show a short progress bar for reading each clip's path
+        # even though ffmpeg's internal progress isn't easily trackable
+        with tqdm(total=len(video_paths), desc=f"Merging to {os.path.basename(output_path)}", unit="videos") as pbar:
+            for _ in video_paths:
+                # We won't individually re-encode each file here,
+                # but let's simulate progress for user feedback
+                pbar.update(1)
+
+        cmd = [
+            'ffmpeg',
+            '-y',
+            '-f', 'concat',
+            '-safe', '0',
+            '-i', list_file,
+            '-c:v', 'libx264',
+            '-preset', 'veryfast',   # Faster encoding preset
+            '-crf', '18',            # Adjust for desired quality (lower=better, bigger files)
+            '-c:a', 'aac',
+            '-movflags', '+faststart',
+            output_path
+        ]
 
         try:
-            with open(list_file, 'w', encoding='utf-8') as f:
-                for i, vp in enumerate(video_paths, start=1):
-                    print(f"{progress_prefix}  Adding clip {i}/{total}: {vp}")
-                    # Surround paths in single-quotes to handle spaces/special chars
-                    f.write(f"file '{os.path.abspath(vp)}'\n")
-
-            # Build ffmpeg command
-            cmd = [
-                'ffmpeg',
-                '-y',
-                '-f', 'concat',
-                '-safe', '0',
-                '-i', list_file,
-                # Encode with libx264 for video and AAC for audio
-                '-c:v', 'libx264',
-                '-c:a', 'aac',
-                # Ensures the MP4 is properly hinted for streaming
-                '-movflags', '+faststart',
-                # You can tune/override parameters below to suit your quality/bitrate needs
-                output_path
-            ]
-
-            print(f"{progress_prefix}Running ffmpeg command:")
-            print(" ".join(cmd))
-            
-            subprocess.run(cmd, check=True)
-
+            subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.STDOUT)
         except subprocess.CalledProcessError as e:
-            print(f"{progress_prefix}Error during ffmpeg concatenation: {e}")
+            print(f"Error during ffmpeg concatenation: {e}")
         finally:
-            # Clean up the temporary list file
             if os.path.exists(list_file):
                 os.remove(list_file)
 
@@ -135,33 +120,34 @@ class Concat_vids:
         Concatenates all .mp4 videos in the specified folder in natural order
         (via chunked merging) and saves the result to output_path.
         """
-        # Get list of all .mp4 files in the folder
-        video_files = [os.path.join(folder_path, f) 
-                       for f in os.listdir(folder_path) 
-                       if f.lower().endswith('.mp4')]
+        # Gather mp4 files
+        video_files = [
+            os.path.join(folder_path, f)
+            for f in os.listdir(folder_path)
+            if f.lower().endswith('.mp4')
+        ]
 
         if not video_files:
             print(f"No .mp4 files found in {folder_path}. Skipping...")
             return
 
-        # Sort the video files using natural sorting
         video_files.sort(key=self.natural_sort_key)
-
-        print(f"\nFound {len(video_files)} videos in '{folder_path}'.")
-        for vf in video_files:
-            print(f" - {os.path.basename(vf)}")
-
-        # Concatenate in chunks to optimize memory usage
+        print(f"Found {len(video_files)} .mp4 files to concatenate.")
         self.concatenate_videos_in_chunks(video_files, output_path)
+        print(f"Final merged video saved at: {output_path}")
 
     def concat_vids(self):
+        """
+        Example usage for testing across 'male' and 'female' folders.
+        Adjust 'test_folder' as needed.
+        """
         test_folder = "test"  # Adjust if necessary
         categories = ["male", "female"]
 
         for category in categories:
             input_folder = os.path.join(test_folder, category)
             output_video = os.path.join(test_folder, f"{category}.mp4")
-            
+
             if not os.path.exists(input_folder):
                 print(f"Folder '{input_folder}' does not exist. Skipping '{category}' category.")
                 continue
