@@ -13,10 +13,10 @@ import sys
 # print('\ntotal_time\n', total_time)
 
 
-sequencer = Sequencer(2, True)
+sequencer = Sequencer(True, 2)
 sequencer.create_sequence('female')
 
-sequencer2 = Sequencer(2, False)
+sequencer2 = Sequencer(False, 2)
 sequencer2.create_sequence('male')
 
 Concat_vids(200).concat_vids()
